@@ -1,0 +1,405 @@
+/* --- Global Styles --- */
+* {
+    scroll-behavior: smooth;
+}
+
+body {
+    /* MODIFIED: Prevent body overflow if something is slightly too wide */
+    overflow-x: hidden;
+    font-family: 'Poppins', system-ui, -apple-system, sans-serif;
+    letter-spacing: -0.01em;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: #0a0f1e;
+    /* Subtle gradient overlay + grid pattern for professional depth */
+    background: 
+        radial-gradient(circle at top right, rgba(6, 182, 212, 0.03) 0%, transparent 50%),
+        radial-gradient(circle at bottom left, rgba(139, 92, 246, 0.02) 0%, transparent 50%),
+        linear-gradient(rgba(6, 182, 212, 0.015) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(6, 182, 212, 0.015) 1px, transparent 1px),
+        linear-gradient(to bottom, #fafbfc 0%, #f8fafc 100%);
+    background-size: 100% 100%, 100% 100%, 60px 60px, 60px 60px, 100% 100%;
+    background-position: top right, bottom left, 0 0, 0 0, 0 0;
+}
+
+/* Professional heading typography with Lora serif */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Lora', Georgia, serif;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    text-rendering: optimizeLegibility;
+}
+
+/* Base styles for dark mode from Tailwind config (handled by JS) */
+.dark body {
+    color: #e2e8f0;
+    background: 
+        radial-gradient(circle at top right, rgba(6, 182, 212, 0.05) 0%, transparent 50%),
+        radial-gradient(circle at bottom left, rgba(139, 92, 246, 0.03) 0%, transparent 50%),
+        linear-gradient(rgba(6, 182, 212, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(6, 182, 212, 0.03) 1px, transparent 1px),
+        linear-gradient(to bottom, #0f172a 0%, #020617 100%);
+    background-size: 100% 100%, 100% 100%, 50px 50px, 50px 50px, 100% 100%;
+    background-position: top right, bottom left, 0 0, 0 0, 0 0;
+}
+
+/* --- Navigation Bar --- */
+#nav-bar {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(248, 250, 252, 0.85) 100%);
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    border: 1px solid rgba(6, 182, 212, 0.12);
+    box-shadow: 
+        0 4px 24px rgba(6, 182, 212, 0.08),
+        0 2px 8px rgba(0, 0, 0, 0.04),
+        inset 0 1px 0 rgba(255, 255, 255, 0.8);
+    transition: all 0.3s ease;
+}
+
+#nav-bar:hover {
+    box-shadow: 
+        0 8px 32px rgba(6, 182, 212, 0.12),
+        0 4px 12px rgba(0, 0, 0, 0.06),
+        inset 0 1px 0 rgba(255, 255, 255, 0.9);
+    border-color: rgba(6, 182, 212, 0.2);
+    transform: translateY(-1px);
+}
+
+.dark #nav-bar {
+    background: linear-gradient(135deg, rgba(15, 23, 42, 0.9) 0%, rgba(15, 23, 42, 0.85) 100%);
+    border-color: rgba(6, 182, 212, 0.15);
+    box-shadow: 
+        0 4px 24px rgba(6, 182, 212, 0.1),
+        inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+.dark #nav-bar:hover {
+    border-color: rgba(6, 182, 212, 0.25);
+    box-shadow: 
+        0 8px 32px rgba(6, 182, 212, 0.15),
+        inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+/* --- Section Title Underline Effect --- */
+.section-title {
+    position: relative;
+    display: inline-block;
+    padding-bottom: 12px;
+}
+
+/* The actual line effect */
+.section-title::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(90deg, transparent, #06b6d4, transparent);
+    transform: translateX(-50%);
+    border-radius: 2px;
+    animation: glow-pulse 2s ease-in-out infinite;
+}
+
+@keyframes glow-pulse {
+    0%, 100% { opacity: 0.8; }
+    50% { opacity: 1; box-shadow: 0 0 20px rgba(6, 182, 212, 0.5); }
+}
+
+/* --- Content Card (General Lift Effect) --- */
+.content-card {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 
+        0 1px 3px rgba(0, 0, 0, 0.08),
+        0 1px 2px rgba(0, 0, 0, 0.06),
+        inset 0 1px 0 rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(6, 182, 212, 0.1);
+    backdrop-filter: blur(8px);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(248, 250, 252, 0.9) 100%);
+}
+
+.content-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 
+        0 20px 40px -8px rgba(6, 182, 212, 0.18),
+        0 8px 16px -4px rgba(6, 182, 212, 0.12),
+        inset 0 1px 0 rgba(255, 255, 255, 1),
+        0 0 0 1px rgba(6, 182, 212, 0.15);
+    border-color: rgba(6, 182, 212, 0.25);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.98) 100%);
+}
+
+.dark .content-card {
+    border-color: rgba(6, 182, 212, 0.1);
+    background: linear-gradient(135deg, rgba(30, 41, 59, 0.5) 0%, rgba(15, 23, 42, 0.5) 100%);
+    box-shadow: 
+        0 1px 3px rgba(0, 0, 0, 0.3),
+        inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+.dark .content-card:hover {
+    box-shadow: 
+        0 20px 40px -8px rgba(6, 182, 212, 0.25),
+        0 8px 16px -4px rgba(6, 182, 212, 0.15),
+        inset 0 1px 0 rgba(255, 255, 255, 0.08),
+        0 0 0 1px rgba(6, 182, 212, 0.2);
+    border-color: rgba(6, 182, 212, 0.3);
+    background: linear-gradient(135deg, rgba(30, 41, 59, 0.7) 0%, rgba(15, 23, 42, 0.6) 100%);
+}
+
+/* --- Skills Tag Hover Effect (Subtle Bounce) --- */
+.skill-tag {
+    /* Base styles inherited from Tailwind */
+    background: linear-gradient(135deg, #ffffff 0%, #f1f5f9 100%);
+    color: #0a0f1e; /* boosted primary-light for better contrast */
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: default;
+    font-weight: 500;
+    border: 1px solid rgba(6, 182, 212, 0.12);
+    position: relative;
+    overflow: hidden;
+    box-shadow: 
+        0 1px 3px rgba(0, 0, 0, 0.08),
+        inset 0 1px 0 rgba(255, 255, 255, 0.8);
+}
+
+.skill-tag::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.6), transparent);
+    transition: left 0.5s;
+}
+
+.skill-tag:hover::before {
+    left: 100%;
+}
+
+.dark .skill-tag {
+    background: linear-gradient(135deg, #334155 0%, #1e293b 100%);
+    color: #e2e8f0; /* primary-dark equivalent */
+    border-color: rgba(6, 182, 212, 0.15);
+    box-shadow: 
+        0 1px 3px rgba(0, 0, 0, 0.3),
+        inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+.skill-tag:hover {
+    transform: translateY(-7px) scale(1.05);
+    box-shadow: 
+        0 16px 32px rgba(6, 182, 212, 0.2),
+        0 8px 16px rgba(6, 182, 212, 0.12),
+        0 0 0 1px rgba(6, 182, 212, 0.3),
+        inset 0 1px 0 rgba(255, 255, 255, 1);
+    background: linear-gradient(135deg, #0891b2 0%, #06b6d4 100%);
+    color: white;
+    border-color: rgba(6, 182, 212, 0.5);
+}
+.dark .skill-tag:hover {
+    background: linear-gradient(135deg, #06b6d4 0%, #0891b2 100%);
+    box-shadow: 
+        0 16px 32px rgba(6, 182, 212, 0.3),
+        0 8px 16px rgba(6, 182, 212, 0.18),
+        0 0 0 1px rgba(6, 182, 212, 0.4);
+}
+
+/* --- Gradient Button (Hero) --- */
+.gradient-button {
+    /* Base structure and position for the glow */
+    position: relative;
+    padding: 2px; /* acts as the border/glow container */
+    border-radius: 0.75rem; /* rounded-xl */
+    overflow: hidden;
+    display: inline-block;
+}
+
+/* The gradient border/glow effect */
+.gradient-button::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    /* Futuristic Gradient */
+    background: conic-gradient(from 0deg, #06b6d4, #8b5cf6, #ec4899, #06b6d4);
+    animation: rotate 4s linear infinite;
+    transition: opacity 0.3s;
+    opacity: 0.8;
+    z-index: 1;
+}
+
+/* Content layer over the gradient */
+.gradient-button-content {
+    position: relative;
+    display: block;
+    padding: 0.75rem 1.5rem; /* py-3 px-6 */
+    border-radius: 0.625rem; /* slightly smaller than container */
+    font-weight: 600; /* font-semibold */
+    background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+    color: #0a0f1e; /* boosted primary-light text */
+    transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+    z-index: 2;
+    box-shadow: inset 0 1px 2px rgba(255, 255, 255, 0.8);
+}
+
+/* Dark Mode Button Background */
+.dark .gradient-button-content {
+    background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+    color: #ffffff; /* bright white text for dark theme */
+    box-shadow: inset 0 1px 2px rgba(255, 255, 255, 0.1);
+}
+
+/* Hover: Enhance glow and change content color */
+.gradient-button:hover::before {
+    opacity: 1;
+    animation-play-state: running;
+}
+.gradient-button:hover .gradient-button-content {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(248, 250, 252, 0.9) 100%);
+    color: #0891b2; /* Change text to accent color */
+    box-shadow: 
+        inset 0 1px 2px rgba(255, 255, 255, 1),
+        0 4px 12px rgba(6, 182, 212, 0.15);
+}
+.dark .gradient-button:hover .gradient-button-content {
+    background: linear-gradient(135deg, rgba(30, 41, 59, 0.95) 0%, rgba(15, 23, 42, 0.9) 100%);
+    color: #06b6d4; /* bright accent color for dark theme */
+    box-shadow: 
+        inset 0 1px 2px rgba(255, 255, 255, 0.15),
+        0 4px 12px rgba(6, 182, 212, 0.25);
+}
+
+@keyframes rotate {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* --- Typing Animation for Hero H2 --- */
+#typing-text {
+    /* Hides the blinking cursor in CSS */
+    border-right: 0.1em solid #06b6d4; 
+    white-space: nowrap; 
+    overflow: hidden; 
+    animation: typing 3s steps(18, end) infinite alternate, blink-caret 0.75s step-end infinite;
+    display: inline-block;
+    width: 13.5ch; /* Default width for "Java Backend" */
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 13.5ch } /* Match character count for "Java Backend" */
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: #06b6d4; }
+}
+
+/* MODIFIED: Media Query to prevent overflow of typing text on super small screens (like iPhone SE/small Androids) */
+@media (max-width: 320px) {
+    #typing-text {
+        /* Reduce width for ultra-small screens to prevent horizontal overflow */
+        width: 10ch; /* Only show "Java Back..." for a brief moment */
+    }
+    @keyframes typing {
+        from { width: 0 }
+        to { width: 10ch }
+    }
+}
+
+/* --- Scroll Reveal Animations --- */
+.scroll-reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s cubic-bezier(0.645, 0.045, 0.355, 1), transform 0.6s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.scroll-reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* --- Professional Profile Avatar Styles --- */
+.profile-avatar {
+    width: 128px; /* 32 * 4px Tailwind base reference */
+    height: 128px;
+    border-radius: 9999px; /* fully round */
+    overflow: visible; /* Allow badge to show */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid rgba(6, 182, 212, 0.25); /* subtle accent border */
+    box-shadow: 
+        0 8px 24px rgba(2, 6, 23, 0.12),
+        0 4px 12px rgba(6, 182, 212, 0.08),
+        0 0 0 8px rgba(6, 182, 212, 0.06),
+        inset 0 2px 4px rgba(255, 255, 255, 0.8);
+    background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+    transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+}
+.profile-avatar:hover {
+    transform: translateY(-6px) scale(1.03);
+    box-shadow: 
+        0 20px 40px rgba(2, 6, 23, 0.16),
+        0 8px 20px rgba(6, 182, 212, 0.15),
+        0 0 0 8px rgba(6, 182, 212, 0.1),
+        inset 0 2px 4px rgba(255, 255, 255, 1);
+}
+
+.dark .profile-avatar {
+    background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+    box-shadow: 
+        0 8px 24px rgba(0, 0, 0, 0.3),
+        0 4px 12px rgba(6, 182, 212, 0.1),
+        0 0 0 8px rgba(6, 182, 212, 0.08);
+}
+
+.dark .profile-avatar:hover {
+    box-shadow: 
+        0 20px 40px rgba(0, 0, 0, 0.4),
+        0 8px 20px rgba(6, 182, 212, 0.18),
+        0 0 0 8px rgba(6, 182, 212, 0.12);
+}
+
+.profile-avatar-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* works for raster images too */
+    display: block;
+    border-radius: 9999px;
+}
+
+/* Professional status badge on avatar */
+.profile-avatar::after {
+    content: '';
+    position: absolute;
+    bottom: 4px;
+    right: 4px;
+    width: 24px;
+    height: 24px;
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+    border: 3px solid #ffffff;
+    border-radius: 50%;
+    box-shadow: 
+        0 2px 8px rgba(16, 185, 129, 0.4),
+        inset 0 1px 2px rgba(255, 255, 255, 0.3);
+}
+.dark .profile-avatar::after {
+    border-color: #0f172a;
+    box-shadow: 
+        0 2px 8px rgba(16, 185, 129, 0.5),
+        inset 0 1px 2px rgba(255, 255, 255, 0.2);
+}
+
+@media (max-width: 640px) {
+    .profile-avatar {
+        width: 96px;
+        height: 96px;
+    }
+}
