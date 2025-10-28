@@ -100,3 +100,79 @@ contactForm.addEventListener('submit', function(event) {
 
     }, 1500); // 1.5 second delay
 });
+
+
+// --- 4. Desktop Dark Mode Toggle ---
+toggleButton?.addEventListener('click', toggleTheme);
+
+
+// --- 5. Mobile Dark Mode Toggle ---
+const mobileToggleButton = document.getElementById('mobile-dark-mode-toggle');
+const mobileSunIcon = document.getElementById('mobile-sun-icon');
+const mobileMoonIcon = document.getElementById('mobile-moon-icon');
+
+const updateMobileThemeIcons = () => {
+    if (root.classList.contains('dark')) {
+        mobileMoonIcon?.classList.remove('hidden');
+        mobileSunIcon?.classList.add('hidden');
+    } else {
+        mobileSunIcon?.classList.remove('hidden');
+        mobileMoonIcon?.classList.add('hidden');
+    }
+};
+
+mobileToggleButton?.addEventListener('click', () => {
+    toggleTheme();
+    updateMobileThemeIcons();
+});
+
+// Initialize mobile theme icons
+updateMobileThemeIcons();
+
+
+// --- 6. Mobile Sidebar Navigation ---
+const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+const mobileNavSidebar = document.getElementById('mobile-nav-sidebar');
+const mobileNavClose = document.getElementById('mobile-nav-close');
+const navOverlay = document.getElementById('nav-overlay');
+const mobileNavLinks = document.getElementById('mobile-nav-links');
+
+let sidebarOpen = false;
+
+const openSidebar = () => {
+    sidebarOpen = true;
+    mobileNavSidebar.classList.add('open');
+    navOverlay.classList.remove('hidden');
+    navOverlay.classList.add('open');
+    document.body.style.overflow = 'hidden';
+};
+
+const closeSidebar = () => {
+    sidebarOpen = false;
+    mobileNavSidebar.classList.remove('open');
+    navOverlay.classList.add('hidden');
+    navOverlay.classList.remove('open');
+    document.body.style.overflow = '';
+};
+
+// Toggle sidebar on menu button click
+mobileMenuToggle?.addEventListener('click', () => {
+    if (sidebarOpen) closeSidebar();
+    else openSidebar();
+});
+
+// Close sidebar on close button click
+mobileNavClose?.addEventListener('click', closeSidebar);
+
+// Close sidebar when clicking on overlay
+navOverlay?.addEventListener('click', closeSidebar);
+
+// Close sidebar when clicking a link
+mobileNavLinks?.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', closeSidebar);
+});
+
+// Close sidebar on Escape key
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && sidebarOpen) closeSidebar();
+});
