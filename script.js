@@ -144,6 +144,7 @@ const openSidebar = () => {
     mobileNavSidebar.classList.add('open');
     navOverlay.classList.remove('hidden');
     navOverlay.classList.add('open');
+    mobileMenuToggle?.classList.add('active');
     document.body.style.overflow = 'hidden';
 };
 
@@ -152,6 +153,7 @@ const closeSidebar = () => {
     mobileNavSidebar.classList.remove('open');
     navOverlay.classList.add('hidden');
     navOverlay.classList.remove('open');
+    mobileMenuToggle?.classList.remove('active');
     document.body.style.overflow = '';
 };
 
