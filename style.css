@@ -288,18 +288,16 @@ svg[width="0"][height="0"] {
 
 /* --- Typing Animation for Hero H2 --- */
 #typing-text {
-    /* Hides the blinking cursor in CSS */
-    border-right: 0.1em solid #06b6d4; 
+    border-right: 0.1em solid #0891b2; 
     white-space: nowrap; 
     overflow: hidden; 
-    animation: typing 3s steps(18, end) infinite alternate, blink-caret 0.75s step-end infinite;
+    animation: typing 3.5s steps(22, end) infinite alternate, blink-caret 0.75s step-end infinite;
     display: inline-block;
-    width: 13.5ch; /* Default width for "Java Backend" */
 }
 
 @keyframes typing {
     from { width: 0 }
-    to { width: 13.5ch } /* Match character count for "Java Backend" */
+    to { width: 22ch } /* character count for "Full-Stack Development" */
 }
 
 @keyframes blink-caret {
@@ -311,11 +309,11 @@ svg[width="0"][height="0"] {
 @media (max-width: 320px) {
     #typing-text {
         /* Reduce width for ultra-small screens to prevent horizontal overflow */
-        width: 10ch; /* Only show "Java Back..." for a brief moment */
+        width: 12ch; 
     }
     @keyframes typing {
         from { width: 0 }
-        to { width: 10ch }
+        to { width: 12ch }
     }
 }
 
@@ -970,7 +968,7 @@ svg[width="0"][height="0"] {
 
     /* Typing text: avoid overflow on small screens */
     #typing-text {
-        width: 10ch;
+        width: 15ch;
     }
 
     /* Footer spacing */
