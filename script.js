@@ -178,3 +178,125 @@ mobileNavLinks?.querySelectorAll('a').forEach(link => {
 document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && sidebarOpen) closeSidebar();
 });
+
+
+// --- 7. Modern Interaction Enhancements ---
+const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+// Smooth anchor scrolling with header offset
+const anchorLinks = document.querySelectorAll('a[href^="#"]');
+anchorLinks.forEach(anchor => {
+    anchor.addEventListener('click', (event) => {
+        const targetId = anchor.getAttribute('href');
+        if (!targetId || targetId === '#') return;
+        const target = document.querySelector(targetId);
+        if (!target) return;
+        event.preventDefault();
+        const offset = 110;
+        const top = target.getBoundingClientRect().top + window.pageYOffset - offset;
+        window.scrollTo({
+            top,
+            behavior: prefersReducedMotion ? 'auto' : 'smooth'
+        });
+    });
+});
+
+// Cursor spotlight
+const finePointer = window.matchMedia('(pointer: fine)').matches;
+if (!prefersReducedMotion && finePointer) {
+    const spotlight = document.createElement('div');
+    spotlight.className = 'cursor-spotlight';
+    document.body.appendChild(spotlight);
+
+    let targetX = window.innerWidth / 2;
+    let targetY = window.innerHeight / 2;
+    let currentX = targetX;
+    let currentY = targetY;
+
+    window.addEventListener('pointermove', (event) => {
+        targetX = event.clientX;
+        targetY = event.clientY;
+    });
+
+    const animateSpotlight = () => {
+        currentX += (targetX - currentX) * 0.1;
+        currentY += (targetY - currentY) * 0.1;
+        spotlight.style.left = `${currentX}px`;
+        spotlight.style.top = `${currentY}px`;
+        requestAnimationFrame(animateSpotlight);
+    };
+
+    animateSpotlight();
+}
+
+// Magnetic buttons
+const magneticButtons = document.querySelectorAll('.gradient-button');
+magneticButtons.forEach(button => {
+    button.addEventListener('mousemove', (event) => {
+        const rect = button.getBoundingClientRect();
+        const offsetX = event.clientX - rect.left - rect.width / 2;
+        const offsetY = event.clientY - rect.top - rect.height / 2;
+        button.style.transform = `translate(${offsetX * 0.2}px, ${offsetY * 0.2}px)`;
+    });
+
+    button.addEventListener('mouseleave', () => {
+        button.style.transform = '';
+    });
+});
+
+// Micro-tilt for cards
+const tiltCards = document.querySelectorAll('.content-card');
+tiltCards.forEach(card => {
+    card.addEventListener('mousemove', (event) => {
+        const rect = card.getBoundingClientRect();
+        const x = event.clientX - rect.left;
+        const y = event.clientY - rect.top;
+        const rotateX = ((y / rect.height) - 0.5) * -10;
+        const rotateY = ((x / rect.width) - 0.5) * 10;
+        card.style.transform = `perspective(900px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-6px)`;
+    });
+
+    card.addEventListener('mouseleave', () => {
+        card.style.transform = '';
+    });
+});
+
+// Parallax for hero elements
+const parallaxItems = document.querySelectorAll('[data-parallax]');
+if (!prefersReducedMotion && parallaxItems.length) {
+    let latestScroll = window.scrollY;
+    const updateParallax = () => {
+        parallaxItems.forEach(element => {
+            const speed = parseFloat(element.dataset.parallax || '0');
+            element.style.setProperty('--parallax-offset', `${latestScroll * speed}px`);
+        });
+    };
+
+    window.addEventListener('scroll', () => {
+        latestScroll = window.scrollY;
+        requestAnimationFrame(updateParallax);
+    });
+
+    updateParallax();
+}
+
+// --- 8. Background Image Rotator (Spidey) ---
+const spidyLayer = document.querySelector('.spidy-layer');
+if (spidyLayer) {
+    const imageList = spidyLayer.dataset.images
+        ? spidyLayer.dataset.images.split(',').map(item => item.trim()).filter(Boolean)
+        : [];
+
+    if (imageList.length > 1) {
+        let index = 0;
+        setInterval(() => {
+            index = (index + 1) % imageList.length;
+            spidyLayer.style.opacity = '0';
+
+            setTimeout(() => {
+                spidyLayer.src = imageList[index];
+                spidyLayer.style.opacity = '';
+            }, 450);
+        }, 6500);
+    }
+}
