@@ -5,10 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aditya Soni - Java/Full-Stack Developer Portfolio</title>
     
-    <!-- Professional fonts: Manrope (body) and Space Grotesk (headings) -->
+    <!-- Font system: Space Grotesk (headings) · Inter (body) · JetBrains Mono (code/tags) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Sora:wght@500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
     
     <script src="https://cdn.tailwindcss.com"></script>
     
@@ -32,8 +33,8 @@
                         'accent-hover': '#06b6d4',
                     },
                     fontFamily: {
-                        sans: ['Manrope', 'system-ui', '-apple-system', 'sans-serif'],
-                        serif: ['Space Grotesk', 'system-ui', 'sans-serif'],
+                        sans: ['Plus Jakarta Sans', 'system-ui', '-apple-system', 'sans-serif'],
+                        serif: ['Sora', 'system-ui', 'sans-serif'],
                     },
                 }
             }
@@ -55,10 +56,10 @@
     <div class="spidy-backdrop" aria-hidden="true">
         <img
             class="spidy-layer"
-            src="/spidy/spiderman-the-flying-legend-cm.jpg"
+            src="spidy/spiderman-the-flying-legend-cm.jpg"
             alt=""
             loading="lazy"
-            data-images="/spidy/spiderman-the-flying-legend-cm.jpg,/spidy/spider-man-brand-new-day-he-never-once-gave-up-tl.jpg,/spidy/spiderman-2099-not-a-villain-just-misunderstood-1s.jpg,/spidy/spiderman-2099-where-madness-meets-masterpiece-bw.jpg,/spidy/spider-man-every-city-needs-a-spider-yj.jpg"
+            data-images="spidy/spiderman-the-flying-legend-cm.jpg,spidy/spider-man-brand-new-day-he-never-once-gave-up-tl.jpg,spidy/spiderman-2099-not-a-villain-just-misunderstood-1s.jpg,spidy/spiderman-2099-where-madness-meets-masterpiece-bw.jpg,spidy/spider-man-every-city-needs-a-spider-yj.jpg"
         >
     </div>
 
@@ -121,7 +122,7 @@
                 </svg>
                 <span>Achievements</span>
             </a>
-            <a href="/resources/resume.pdf" target="_blank" class="mobile-nav-link" data-icon="resume">
+            <a href="resources/resume.pdf" target="_blank" class="mobile-nav-link" data-icon="resume">
                 <svg class="mobile-nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" xmlns="http://www.w3.org/2000/svg">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m-5 3h4a2 2 0 002-2V7a2 2 0 00-2-2H9a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
                 </svg>
@@ -179,7 +180,7 @@
                 <a href="#achievements" class="p-2 rounded-full hover:bg-gray-200/50 dark:hover:bg-gray-700/50 transition duration-200" title="Achievements">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
                 </a>
-                <a href="/resources/resume.pdf" target="_blank" class="p-2 rounded-full hover:bg-gray-200/50 dark:hover:bg-gray-700/50 transition duration-200" title="Resume (PDF)">
+                <a href="resources/resume.pdf" target="_blank" class="p-2 rounded-full hover:bg-gray-200/50 dark:hover:bg-gray-700/50 transition duration-200" title="Resume (PDF)">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m-5 3h4a2 2 0 002-2V7a2 2 0 00-2-2H9a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
                 </a>
                 <a href="https://github.com/Adia12528" target="_blank" rel="noopener noreferrer" class="p-2 rounded-full hover:bg-gray-200/50 dark:hover:bg-gray-700/50 transition duration-200" title="GitHub">
@@ -219,25 +220,25 @@
 
     <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20">
 
-        <section id="hero" class="flex flex-col items-center text-center">
+        <section id="hero" class="hero-shell flex flex-col items-center text-center">
                 <!-- Professional profile avatar: circular, subtle border and shadow for a clean, corporate look -->
                 <div class="profile-avatar mb-6" role="img" aria-label="Aditya Soni — Professional profile picture" data-parallax="0.18">
-                    <img src="/resources/portfolio_image.jpg" alt="Aditya Soni — Professional Profile" class="profile-avatar-img">
+                    <img src="resources/portfolio_image.jpg" alt="Aditya Soni — Professional Profile" class="profile-avatar-img">
                 </div>
                 <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold text-primary-light dark:text-primary-dark mb-4 leading-tight transition-colors duration-500" data-parallax="0.1">
                     Hi, I'm <span class="text-accent">Aditya Soni</span>
                 </h1>
 
                 <h2 class="text-xl sm:text-2xl md:text-3xl font-bold text-gray-700 dark:text-gray-300 mb-8 transition-colors duration-500" data-parallax="0.06">
-                    B.Tech CSE | Fresher Software Engineer specialized in 
-                    <span id="typing-text" class="text-accent font-extrabold">Full-Stack Development</span>
+                    B.Tech CSE | Full-Stack Developer building
+                    <span id="typing-text" class="text-accent font-extrabold">AI-powered Web Apps</span>
                 </h2>
 
                 <p class="text-lg md:text-xl text-gray-700 dark:text-gray-400 max-w-3xl mb-4 transition-colors duration-500">
-                    Building scalable applications and applied machine learning models. Skilled in Python, Django, React, SQL, and MongoDB.
+                    I build responsive web apps and AI-enabled tools with clean UI, scalable backend logic, and modern stacks like Python, Django, React, SQL, and MongoDB.
                 </p>
                 
-                <div class="flex flex-col items-center mb-12 space-y-2 text-gray-600 dark:text-gray-400">
+                <div class="hero-meta flex flex-col items-center mb-12 space-y-2 text-gray-600 dark:text-gray-400">
                     <p class="flex items-center space-x-2">
                         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
                         <span>adityasoniworkmail@gmail.com</span>
@@ -252,7 +253,13 @@
                     </p>
                 </div>
 
-                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-6">
+                <div class="hero-simple-highlights" aria-label="Key highlights">
+                    <span>Internship at TATA STEEL</span>
+                    <span>8.02 GPA</span>
+                    <span>4+ live projects</span>
+                </div>
+
+                <div class="hero-actions flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-6">
                     <a href="https://calendly.com/adityasoniworkmail/30min" target="_blank" rel="noopener noreferrer" class="gradient-button">
                         <span class="gradient-button-content">Book a meet</span>
                     </a>
@@ -263,25 +270,42 @@
             </section>
 
         <section id="about" class="pt-32 pb-20">
-            <div class="text-center mb-16 scroll-reveal">
-                <h2 class="text-3xl font-bold section-title text-primary-light dark:text-primary-dark transition-colors duration-500">About Me</h2>
+            <div class="section-header text-center mb-16 scroll-reveal" data-label="Background">
+                <h2 class="section-title text-primary-light dark:text-primary-dark transition-colors duration-500">About Me</h2>
             </div>
             <div class="max-w-4xl mx-auto text-lg text-gray-700 dark:text-gray-400 leading-relaxed space-y-6 scroll-reveal" data-delay="100">
                 <p>
-                    I am a Fresher Software Engineer skilled in full-stack web development and applied machine learning. As a B.Tech student with a GPA of 8.02, I have built expertise in Python, Django, React, SQL, and MongoDB.
+                    Hi, I'm <strong>Aditya Soni</strong>, a Computer Science and Engineering student with a passion for building technology that solves real-world problems. I enjoy working across the full software development lifecycle—from designing intuitive user interfaces to developing scalable backends and integrating AI-powered features.
                 </p>
                 <p>
-                    I am familiar with CI/CD pipelining for automating build, testing, and deployment processes, along with developing scalable applications and ML models. My technical journey is driven by a passion for solving complex architectural challenges and delivering high-quality, maintainable code.
+                    My primary interests include <strong>Full-Stack Development, Artificial Intelligence, Generative AI, Android Development, and Data Science</strong>. I have experience building applications using the <strong>MERN stack</strong>, creating cross-platform and native Android applications, designing REST APIs, and working with databases such as <strong>MongoDB and SQL</strong>.
                 </p>
                 <p>
-                    Beyond technical skills, I pride myself on rapport building, strong stakeholder management, and excellent communication. I thrive in collaborative environments where I can leverage my leadership and technical skills to build innovative solutions.
+                    I believe in learning by building. Over time, I have developed projects ranging from intelligent web applications and portfolio websites to AI-assisted platforms and productivity tools. I continuously explore emerging technologies such as <strong>Large Language Models (LLMs), Agentic AI, automation, and modern cloud deployment</strong> to stay ahead in the rapidly evolving tech landscape.
+                </p>
+                <p>
+                    Beyond coding, I enjoy solving algorithmic problems, participating in technical challenges, and improving my software engineering skills through hands-on projects and continuous learning. My goal is to become a software engineer capable of creating impactful products that combine scalability, usability, and intelligent automation.
+                </p>
+                <div>
+                    <p class="font-semibold text-primary-light dark:text-primary-dark mb-3">Currently, I am focused on strengthening my expertise in:</p>
+                    <ul class="list-disc list-inside space-y-2">
+                        <li>Full-Stack Web Development (MERN)</li>
+                        <li>Generative AI &amp; LLM Applications</li>
+                        <li>Machine Learning &amp; Data Science</li>
+                        <li>Cloud Deployment &amp; DevOps</li>
+                        <li>System Design &amp; Scalable Software Architecture</li>
+                        <li>Android Application Development</li>
+                    </ul>
+                </div>
+                <p>
+                    I'm always excited to collaborate on innovative projects, contribute to open-source software, and connect with people who are passionate about technology and innovation.
                 </p>
             </div>
         </section>
 
         <section id="experience" class="pt-32 pb-20">
-            <div class="text-center mb-16 scroll-reveal">
-                <h2 class="text-3xl font-bold section-title text-primary-light dark:text-primary-dark transition-colors duration-500">Experience</h2>
+            <div class="section-header text-center mb-16 scroll-reveal" data-label="Work History">
+                <h2 class="section-title text-primary-light dark:text-primary-dark transition-colors duration-500">Experience</h2>
             </div>
             <div class="max-w-4xl mx-auto space-y-8 scroll-reveal" data-delay="100">
                 <div class="content-card p-6 rounded-xl bg-secondary-light dark:bg-gray-800 shadow-md">
@@ -305,92 +329,282 @@
         </section>
 
         <section id="projects" class="pt-32 pb-20">
-            <div class="text-center mb-16 scroll-reveal">
-                <h2 class="text-3xl font-bold section-title text-primary-light dark:text-primary-dark transition-colors duration-500">Live Websites & Featured Work</h2>
+            <div class="section-header text-center mb-16 scroll-reveal" data-label="Portfolio">
+                <h2 class="text-3xl font-bold section-title text-primary-light dark:text-primary-dark transition-colors duration-500">Live Websites &amp; Selected Work</h2>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-                
-                <div class="content-card scroll-reveal p-6 rounded-xl bg-secondary-light dark:bg-gray-800 shadow-md transform hover:scale-[1.01] transition duration-300" data-delay="0">
-                    <h3 class="text-xl font-semibold mb-2 text-primary-light dark:text-primary-dark">Automata Engine</h3>
-                    <p class="text-sm text-gray-600 dark:text-gray-400 mb-4">Interactive learning tool for visualizing automata concepts (DFA, NFA, PDA, TM) with AI assistance from Google Gemini.</p>
-                    <div class="flex flex-wrap gap-2 text-xs mb-4">
-                        <span class="px-2 py-0.5 rounded-full bg-accent/20 text-accent dark:bg-accent/10">API Integration</span>
-                        <span class="px-2 py-0.5 rounded-full bg-accent/20 text-accent dark:bg-accent/10">JavaScript</span>
-                        <span class="px-2 py-0.5 rounded-full bg-accent/20 text-accent dark:bg-accent/10">Gemini AI</span>
+
+                <!-- Card 1: Automata Engine -->
+                <div class="project-card content-card scroll-reveal" data-delay="0">
+                    <!-- Zone 1: Head -->
+                    <div class="pc-head">
+                        <span class="pc-category">Learning platform</span>
+                        <span class="pc-num">01</span>
                     </div>
-                    <div class="flex justify-between text-sm font-semibold mt-2">
-                        <a href="https://automata-engine.vercel.app/#home" target="_blank" rel="noopener noreferrer" class="text-green-500 hover:underline">View Live Site &rarr;</a>
-                        <a href="https://github.com/Adia12528/AutomataEngine" target="_blank" rel="noopener noreferrer" class="text-accent hover:underline">View Repository</a>
+                    <!-- Zone 2: Body -->
+                    <div class="pc-body">
+                        <h3 class="pc-title">Automata Engine</h3>
+                        <p class="pc-desc">Interactive learning experience that turns <mark class="hl">automata theory</mark> into a <mark class="hl">visual, guided journey</mark> with AI support.</p>
+                        <hr class="pc-divider">
+                        <div class="pc-meta">
+                            <div class="pc-meta-item">
+                                <span class="pc-meta-label">Role</span>
+                                <span class="pc-meta-value">Full-stack builder</span>
+                            </div>
+                            <div class="pc-meta-item">
+                                <span class="pc-meta-label">Stack</span>
+                                <span class="pc-meta-value">JS · Gemini AI</span>
+                            </div>
+                            <div class="pc-meta-item">
+                                <span class="pc-meta-label">Impact</span>
+                                <span class="pc-meta-value">Visual clarity</span>
+                            </div>
+                        </div>
+                        <button type="button" class="case-study-toggle" data-case-toggle="case-study-1" aria-expanded="false">
+                            <span class="case-study-toggle-copy">
+                                <strong>Open story</strong>
+                                <small>How this product came together</small>
+                            </span>
+                            <span class="case-study-toggle-icon" aria-hidden="true">↗</span>
+                        </button>
+                        <div id="case-study-1" class="case-study-panel">
+                            <div class="case-study-item">
+                                <span class="case-study-item-label">Challenge</span>
+                                <ul class="case-study-list">
+                                    <li>Automata concepts felt abstract and difficult to grasp without visual context.</li>
+                                </ul>
+                            </div>
+                            <div class="case-study-item">
+                                <span class="case-study-item-label">Approach</span>
+                                <ul class="case-study-list">
+                                    <li>Created a guided flow with interactive examples, visual feedback, and Gemini-assisted explanations.</li>
+                                </ul>
+                            </div>
+                            <div class="case-study-item">
+                                <span class="case-study-item-label">Outcome</span>
+                                <ul class="case-study-list">
+                                    <li>Made complex theory feel more intuitive, memorable, and easier to explore.</li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                
-                <!-- DevChat Pro -->
-                <div class="content-card scroll-reveal p-6 rounded-xl bg-secondary-light dark:bg-gray-800 shadow-md transform hover:scale-[1.01] transition duration-300" data-delay="100">
-                    <h3 class="text-xl font-semibold mb-2 text-primary-light dark:text-primary-dark">DevChat Pro</h3>
-                    <p class="text-sm text-gray-600 dark:text-gray-400 mb-4">Full-featured messaging & video calling app with WebRTC, Socket.io, and Firebase. Modern alternative for communication.</p>
-                    <div class="flex flex-wrap gap-2 text-xs mb-4">
-                        <span class="px-2 py-0.5 rounded-full bg-accent/20 text-accent dark:bg-accent/10">Node.js</span>
-                        <span class="px-2 py-0.5 rounded-full bg-accent/20 text-accent dark:bg-accent/10">React</span>
-                        <span class="px-2 py-0.5 rounded-full bg-accent/20 text-accent dark:bg-accent/10">WebRTC</span>
-                        <span class="px-2 py-0.5 rounded-full bg-accent/20 text-accent dark:bg-accent/10">Firebase</span>
-                    </div>
-                    <div class="flex justify-between text-sm font-semibold mt-2">
-                        <a href="https://devchat-pro-frontend.vercel.app/" target="_blank" rel="noopener noreferrer" class="text-green-500 hover:underline">View Live Site &rarr;</a>
-                        <a href="https://github.com/Adia12528/DevChat_pro" target="_blank" rel="noopener noreferrer" class="text-accent hover:underline">View Repository</a>
-                    </div>
-                </div>
-                
-                <div class="content-card scroll-reveal p-6 rounded-xl bg-secondary-light dark:bg-gray-800 shadow-md transform hover:scale-[1.01] transition duration-300" data-delay="200">
-                    <h3 class="text-xl font-semibold mb-2 text-primary-light dark:text-primary-dark">TaxMate (AI Integrated)</h3>
-                    <p class="text-sm text-gray-600 dark:text-gray-400 mb-4">A MERN stack system integrating AI/OCR for smart document processing, personalized tax guidance, and regime comparison.</p>
-                    <div class="flex flex-wrap gap-2 text-xs mb-4">
-                        <span class="px-2 py-0.5 rounded-full bg-accent/20 text-accent dark:bg-accent/10">MERN Stack</span>
-                        <span class="px-2 py-0.5 rounded-full bg-accent/20 text-accent dark:bg-accent/10">AI/OCR</span>
-                        <span class="px-2 py-0.5 rounded-full bg-accent/20 text-accent dark:bg-accent/10">Node.js/Express</span>
-                    </div>
-                    <div class="flex justify-between text-sm font-semibold mt-2">
-                         <a href="https://easy-tax-simplification.vercel.app/" target="_blank" rel="noopener noreferrer" class="text-green-500 hover:underline">View Live Site &rarr;</a>
-                        <a href="https://github.com/Adia12528/EasyTaxSimplification" target="_blank" rel="noopener noreferrer" class="text-accent hover:underline">View Repository</a>
-                    </div>
-                </div>
-                
-                <div class="content-card scroll-reveal p-6 rounded-xl bg-secondary-light dark:bg-gray-800 shadow-md transform hover:scale-[1.01] transition duration-300" data-delay="300">
-                    <h3 class="text-xl font-semibold mb-2 text-primary-light dark:text-primary-dark">Kramik AI Blockchain Hub</h3>
-                    <p class="text-sm text-gray-600 dark:text-gray-400 mb-4">Comprehensive educational platform with AI-powered learning, blockchain-verified credentials, interactive quizzes, and admin dashboard for engineering students.</p>
-                    <div class="flex flex-wrap gap-2 text-xs mb-4">
-                        <span class="px-2 py-0.5 rounded-full bg-accent/20 text-accent dark:bg-accent/10">React/Vite</span>
-                        <span class="px-2 py-0.5 rounded-full bg-accent/20 text-accent dark:bg-accent/10">Node.js/Express</span>
-                        <span class="px-2 py-0.5 rounded-full bg-accent/20 text-accent dark:bg-accent/10">Blockchain</span>
-                        <span class="px-2 py-0.5 rounded-full bg-accent/20 text-accent dark:bg-accent/10">Gemini AI</span>
-                    </div>
-                    <div class="flex justify-between text-sm font-semibold mt-2">
-                        <a href="https://kramik-ai-blockchain-project.vercel.app" target="_blank" rel="noopener noreferrer" class="text-green-500 hover:underline">View Live Site &rarr;</a>
-                        <a href="https://github.com/Adia12528/Kramik_Ai_blockchain_project" target="_blank" rel="noopener noreferrer" class="text-accent hover:underline">View Repository</a>
-                    </div>
-                </div>
-                
-                <!-- Devcaht Project Card -->
-                <div class="content-card scroll-reveal p-6 rounded-xl bg-secondary-light dark:bg-gray-800 shadow-md transform hover:scale-[1.01] transition duration-300" data-delay="400">
-                    <h3 class="text-xl font-semibold mb-2 text-primary-light dark:text-primary-dark">DevChat Pro</h3>
-                    <p class="text-sm text-gray-600 dark:text-gray-400 mb-4">A real-time developer chat platform enabling seamless collaboration, code sharing, and instant messaging for tech teams and communities.</p>
-                    <div class="flex flex-wrap gap-2 text-xs mb-4">
-                        <span class="px-2 py-0.5 rounded-full bg-accent/20 text-accent dark:bg-accent/10">MERN Stack</span>
-                        <span class="px-2 py-0.5 rounded-full bg-accent/20 text-accent dark:bg-accent/10">Socket.io</span>
-                        <span class="px-2 py-0.5 rounded-full bg-accent/20 text-accent dark:bg-accent/10">Real-time</span>
-                        <span class="px-2 py-0.5 rounded-full bg-accent/20 text-accent dark:bg-accent/10">Collaboration</span>
-                    </div>
-                    <div class="flex justify-between text-sm font-semibold mt-2">
-                        <a href="https://devchat-pro-frontend.vercel.app/" target="_blank" rel="noopener noreferrer" class="text-green-500 hover:underline">View Live Site &rarr;</a>
-                        <a href="https://github.com/Adia12528/DevChat_pro" target="_blank" rel="noopener noreferrer" class="text-accent hover:underline">View Repository</a>
+                    <!-- Zone 3: Foot -->
+                    <div class="pc-foot">
+                        <div class="pc-tags">
+                            <span>API Integration</span>
+                            <span>JavaScript</span>
+                            <span>Gemini AI</span>
+                        </div>
+                        <div class="pc-links">
+                            <a href="https://automata-engine.vercel.app/#home" target="_blank" rel="noopener noreferrer" class="pc-link-live">View Live →</a>
+                            <a href="https://github.com/Adia12528/AutomataEngine" target="_blank" rel="noopener noreferrer" class="pc-link-repo">Repository</a>
+                        </div>
                     </div>
                 </div>
-                
+
+                <!-- Card 2: DevChat Pro -->
+                <div class="project-card content-card scroll-reveal" data-delay="100">
+                    <div class="pc-head">
+                        <span class="pc-category">Real-time communication</span>
+                        <span class="pc-num">02</span>
+                    </div>
+                    <div class="pc-body">
+                        <h3 class="pc-title">DevChat Pro</h3>
+                        <p class="pc-desc"><mark class="hl">Real-time messaging</mark> and video collaboration app built for fast team conversations and <mark class="hl">low-latency coordination.</mark></p>
+                        <hr class="pc-divider">
+                        <div class="pc-meta">
+                            <div class="pc-meta-item">
+                                <span class="pc-meta-label">Role</span>
+                                <span class="pc-meta-value">Product engineer</span>
+                            </div>
+                            <div class="pc-meta-item">
+                                <span class="pc-meta-label">Stack</span>
+                                <span class="pc-meta-value">React · WebRTC</span>
+                            </div>
+                            <div class="pc-meta-item">
+                                <span class="pc-meta-label">Impact</span>
+                                <span class="pc-meta-value">Low-latency collab</span>
+                            </div>
+                        </div>
+                        <button type="button" class="case-study-toggle" data-case-toggle="case-study-2" aria-expanded="false">
+                            <span class="case-study-toggle-copy">
+                                <strong>Open story</strong>
+                                <small>How this product came together</small>
+                            </span>
+                            <span class="case-study-toggle-icon" aria-hidden="true">↗</span>
+                        </button>
+                        <div id="case-study-2" class="case-study-panel">
+                            <div class="case-study-item">
+                                <span class="case-study-item-label">Challenge</span>
+                                <ul class="case-study-list">
+                                    <li>Developer teams needed fast, focused collaboration without bouncing between tools.</li>
+                                </ul>
+                            </div>
+                            <div class="case-study-item">
+                                <span class="case-study-item-label">Approach</span>
+                                <ul class="case-study-list">
+                                    <li>Combined chat, video, and live state sync into one streamlined experience.</li>
+                                </ul>
+                            </div>
+                            <div class="case-study-item">
+                                <span class="case-study-item-label">Outcome</span>
+                                <ul class="case-study-list">
+                                    <li>Created a lightweight environment for quick communication and smoother teamwork.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pc-foot">
+                        <div class="pc-tags">
+                            <span>Node.js</span>
+                            <span>React</span>
+                            <span>WebRTC</span>
+                            <span>Firebase</span>
+                        </div>
+                        <div class="pc-links">
+                            <a href="https://devchat-pro-frontend.vercel.app/" target="_blank" rel="noopener noreferrer" class="pc-link-live">View Live →</a>
+                            <a href="https://github.com/Adia12528/DevChat_pro" target="_blank" rel="noopener noreferrer" class="pc-link-repo">Repository</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3: TaxMate AI -->
+                <div class="project-card content-card scroll-reveal" data-delay="200">
+                    <div class="pc-head">
+                        <span class="pc-category">AI workflow</span>
+                        <span class="pc-num">03</span>
+                    </div>
+                    <div class="pc-body">
+                        <h3 class="pc-title">TaxMate <span class="ai-badge">AI</span></h3>
+                        <p class="pc-desc"><mark class="hl">AI-powered tax assistant</mark> that simplifies <mark class="hl">document intake</mark>, regime comparison, and filing guidance for everyday users.</p>
+                        <hr class="pc-divider">
+                        <div class="pc-meta">
+                            <div class="pc-meta-item">
+                                <span class="pc-meta-label">Role</span>
+                                <span class="pc-meta-value">Full-stack engineer</span>
+                            </div>
+                            <div class="pc-meta-item">
+                                <span class="pc-meta-label">Stack</span>
+                                <span class="pc-meta-value">MERN · OCR</span>
+                            </div>
+                            <div class="pc-meta-item">
+                                <span class="pc-meta-label">Impact</span>
+                                <span class="pc-meta-value">Smarter filing</span>
+                            </div>
+                        </div>
+                        <button type="button" class="case-study-toggle" data-case-toggle="case-study-3" aria-expanded="false">
+                            <span class="case-study-toggle-copy">
+                                <strong>Open story</strong>
+                                <small>How this product came together</small>
+                            </span>
+                            <span class="case-study-toggle-icon" aria-hidden="true">↗</span>
+                        </button>
+                        <div id="case-study-3" class="case-study-panel">
+                            <div class="case-study-item">
+                                <span class="case-study-item-label">Challenge</span>
+                                <ul class="case-study-list">
+                                    <li>Tax guidance was overwhelming because the process involved too many documents and too much uncertainty.</li>
+                                </ul>
+                            </div>
+                            <div class="case-study-item">
+                                <span class="case-study-item-label">Approach</span>
+                                <ul class="case-study-list">
+                                    <li>Used OCR and AI workflows to reduce manual effort and speed up regime comparisons.</li>
+                                </ul>
+                            </div>
+                            <div class="case-study-item">
+                                <span class="case-study-item-label">Outcome</span>
+                                <ul class="case-study-list">
+                                    <li>Helped users make clearer, more confident decisions with less friction.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pc-foot">
+                        <div class="pc-tags">
+                            <span>MERN Stack</span>
+                            <span>AI / OCR</span>
+                            <span>Node.js/Express</span>
+                        </div>
+                        <div class="pc-links">
+                            <a href="https://easy-tax-simplification.vercel.app/" target="_blank" rel="noopener noreferrer" class="pc-link-live">View Live →</a>
+                            <a href="https://github.com/Adia12528/EasyTaxSimplification" target="_blank" rel="noopener noreferrer" class="pc-link-repo">Repository</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 4: Kramik AI Blockchain Hub -->
+                <div class="project-card content-card scroll-reveal" data-delay="300">
+                    <div class="pc-head">
+                        <span class="pc-category">Learning ecosystem</span>
+                        <span class="pc-num">04</span>
+                    </div>
+                    <div class="pc-body">
+                        <h3 class="pc-title">Kramik AI Blockchain Hub</h3>
+                        <p class="pc-desc">Learning platform that combines <mark class="hl">AI-driven lessons</mark>, <mark class="hl">verified credentials</mark>, quizzes, and admin tools in one experience.</p>
+                        <hr class="pc-divider">
+                        <div class="pc-meta">
+                            <div class="pc-meta-item">
+                                <span class="pc-meta-label">Role</span>
+                                <span class="pc-meta-value">Platform builder</span>
+                            </div>
+                            <div class="pc-meta-item">
+                                <span class="pc-meta-label">Stack</span>
+                                <span class="pc-meta-value">React · Node</span>
+                            </div>
+                            <div class="pc-meta-item">
+                                <span class="pc-meta-label">Impact</span>
+                                <span class="pc-meta-value">Credentialed learning</span>
+                            </div>
+                        </div>
+                        <button type="button" class="case-study-toggle" data-case-toggle="case-study-4" aria-expanded="false">
+                            <span class="case-study-toggle-copy">
+                                <strong>Open story</strong>
+                                <small>How this product came together</small>
+                            </span>
+                            <span class="case-study-toggle-icon" aria-hidden="true">↗</span>
+                        </button>
+                        <div id="case-study-4" class="case-study-panel">
+                            <div class="case-study-item">
+                                <span class="case-study-item-label">Challenge</span>
+                                <ul class="case-study-list">
+                                    <li>Students needed a structured learning path with credible proof of completion.</li>
+                                </ul>
+                            </div>
+                            <div class="case-study-item">
+                                <span class="case-study-item-label">Approach</span>
+                                <ul class="case-study-list">
+                                    <li>Built AI-assisted learning modules with blockchain-backed credential validation.</li>
+                                </ul>
+                            </div>
+                            <div class="case-study-item">
+                                <span class="case-study-item-label">Outcome</span>
+                                <ul class="case-study-list">
+                                    <li>Created a more credible and engaging learning ecosystem for aspiring engineers.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pc-foot">
+                        <div class="pc-tags">
+                            <span>React/Vite</span>
+                            <span>Node.js/Express</span>
+                            <span>Blockchain</span>
+                            <span>Gemini AI</span>
+                        </div>
+                        <div class="pc-links">
+                            <a href="https://kramik-ai-blockchain-project.vercel.app" target="_blank" rel="noopener noreferrer" class="pc-link-live">View Live →</a>
+                            <a href="https://github.com/Adia12528/Kramik_Ai_blockchain_project" target="_blank" rel="noopener noreferrer" class="pc-link-repo">Repository</a>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </section>
 
         <section id="skills" class="pt-32 pb-20">
-            <div class="text-center mb-16 scroll-reveal">
-                <h2 class="text-3xl font-bold section-title text-primary-light dark:text-primary-dark transition-colors duration-500">Technical Skills</h2>
+            <div class="section-header text-center mb-16 scroll-reveal" data-label="Capabilities">
+                <h2 class="section-title text-primary-light dark:text-primary-dark transition-colors duration-500">Technical Skills</h2>
             </div>
             <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 scroll-reveal" data-delay="100">
                 <div class="content-card p-6 rounded-xl bg-secondary-light dark:bg-gray-800 shadow-md">
@@ -446,8 +660,8 @@
         </section>
 
         <section id="activities" class="pt-32 pb-20">
-            <div class="text-center mb-16 scroll-reveal">
-                <h2 class="text-3xl font-bold section-title text-primary-light dark:text-primary-dark transition-colors duration-500">Activities</h2>
+            <div class="section-header text-center mb-16 scroll-reveal" data-label="Involvement">
+                <h2 class="section-title text-primary-light dark:text-primary-dark transition-colors duration-500">Activities</h2>
             </div>
             <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
                 <!-- Hackathon 1 -->
@@ -533,8 +747,8 @@
         </section>
 
         <section id="achievements" class="pt-32 pb-20">
-            <div class="text-center mb-16 scroll-reveal">
-                <h2 class="text-3xl font-bold section-title text-primary-light dark:text-primary-dark transition-colors duration-500">Achievements</h2>
+            <div class="section-header text-center mb-16 scroll-reveal" data-label="Recognition">
+                <h2 class="section-title text-primary-light dark:text-primary-dark transition-colors duration-500">Achievements</h2>
             </div>
             <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 scroll-reveal" data-delay="100">
                 <!-- Achievement 1 -->
@@ -573,8 +787,8 @@
         </section>
 
         <section id="certifications" class="pt-32 pb-20">
-            <div class="text-center mb-16 scroll-reveal">
-                <h2 class="text-3xl font-bold section-title text-primary-light dark:text-primary-dark transition-colors duration-500">Certifications</h2>
+            <div class="section-header text-center mb-16 scroll-reveal" data-label="Credentials">
+                <h2 class="section-title text-primary-light dark:text-primary-dark transition-colors duration-500">Certifications</h2>
             </div>
             <div class="max-w-4xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-6 scroll-reveal" data-delay="100">
                 <div class="content-card p-6 rounded-xl bg-secondary-light dark:bg-gray-800 shadow-md border-l-4 border-accent">
@@ -630,15 +844,9 @@
                     </div>
                 </div>
             </div>
-        </section>
-        </section>
-
         <section id="education" class="pt-32 pb-20">
-
-
-        <section id="education" class="pt-32 pb-20">
-            <div class="text-center mb-16 scroll-reveal">
-                <h2 class="text-3xl font-bold section-title text-primary-light dark:text-primary-dark transition-colors duration-500">Education</h2>
+            <div class="section-header text-center mb-16 scroll-reveal" data-label="Academic">
+                <h2 class="section-title text-primary-light dark:text-primary-dark transition-colors duration-500">Education</h2>
             </div>
             <div class="max-w-3xl mx-auto space-y-6">
                 <!-- University -->
@@ -678,11 +886,11 @@
 
         <section id="contact" class="pt-32 pb-20">
             <div class="text-center mb-16 scroll-reveal">
-                <h2 class="text-3xl font-bold section-title text-primary-light dark:text-primary-dark transition-colors duration-500">Get In Touch</h2>
+                <h2 class="section-title text-primary-light dark:text-primary-dark transition-colors duration-500">Get In Touch</h2>
             </div>
             <div class="max-w-xl mx-auto scroll-reveal" data-delay="100">
                 <p class="text-center text-lg text-gray-700 dark:text-gray-400 mb-6">Have a Question? Let's Chat!</p>
-                <div class="flex flex-wrap justify-center gap-3 mb-10">
+                <div class="contact-quick-links flex flex-wrap justify-center gap-3 mb-10">
                     <a href="https://calendly.com/adityasoniworkmail/30min" target="_blank" rel="noopener noreferrer" class="px-4 py-2 bg-green-600 text-white rounded-lg shadow-md hover:bg-green-700 transition duration-300 text-sm flex items-center space-x-1">
                         <span class="font-bold">📅</span> <span>Book a meet</span>
                     </a>
@@ -699,7 +907,7 @@
 
                 <p class="text-center text-lg text-gray-700 dark:text-gray-400 mb-6">Reach Out Via Email</p>
 
-                <div class="content-card bg-white dark:bg-gray-800 p-6 rounded-xl shadow-2xl border border-gray-200 dark:border-gray-700 transition-colors duration-500">
+                <div class="contact-form-card content-card bg-white dark:bg-gray-800 p-6 rounded-xl shadow-2xl border border-gray-200 dark:border-gray-700 transition-colors duration-500">
                     <form id="contact-form" class="space-y-4">
                         <div>
                             <label for="email" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Your Email</label>
@@ -720,7 +928,7 @@
 
     </main>
 
-    <footer class="text-center py-8">
+    <footer class="site-footer text-center py-8">
         <p class="text-sm text-gray-500 dark:text-gray-400 transition-colors duration-500">Designed and Developed by Aditya Soni.</p>
     </footer>
 

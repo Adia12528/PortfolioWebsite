@@ -130,6 +130,71 @@ mobileToggleButton?.addEventListener('click', () => {
 updateMobileThemeIcons();
 
 
+// --- 6. Live Status + Quick Navigation + Case Studies ---
+const heroStatusDate = document.querySelector('.hero-status-date');
+if (heroStatusDate) {
+    heroStatusDate.textContent = new Intl.DateTimeFormat('en', {
+        month: 'short',
+        day: 'numeric',
+        year: 'numeric'
+    }).format(new Date());
+}
+
+const caseStudyToggles = document.querySelectorAll('[data-case-toggle]');
+caseStudyToggles.forEach((toggleButtonElement) => {
+    const targetId = toggleButtonElement.getAttribute('data-case-toggle');
+    const caseStudyPanel = targetId ? document.getElementById(targetId) : null;
+
+    if (!caseStudyPanel) return;
+
+    const updatePanelHeight = () => {
+        if (caseStudyPanel.classList.contains('is-open')) {
+            const nextHeight = `${Math.ceil(caseStudyPanel.scrollHeight + 8)}px`;
+            caseStudyPanel.style.maxHeight = nextHeight;
+            caseStudyPanel.style.visibility = 'visible';
+        }
+    };
+
+    toggleButtonElement.addEventListener('click', () => {
+        const isOpen = caseStudyPanel.classList.contains('is-open');
+        const nextOpenState = !isOpen;
+        const nextHeight = `${Math.ceil(caseStudyPanel.scrollHeight + 8)}px`;
+
+        caseStudyPanel.classList.toggle('is-open', nextOpenState);
+        caseStudyPanel.style.maxHeight = nextOpenState ? nextHeight : '0px';
+        caseStudyPanel.style.visibility = nextOpenState ? 'visible' : 'hidden';
+        caseStudyPanel.style.opacity = nextOpenState ? '1' : '0';
+        caseStudyPanel.style.pointerEvents = nextOpenState ? 'auto' : 'none';
+        toggleButtonElement.classList.toggle('is-active', nextOpenState);
+        toggleButtonElement.setAttribute('aria-expanded', String(nextOpenState));
+
+        const title = toggleButtonElement.querySelector('.case-study-toggle-copy strong');
+        if (title) {
+            title.textContent = nextOpenState ? 'Collapse story' : 'Open story';
+        }
+    });
+
+    caseStudyPanel.classList.remove('is-open');
+    caseStudyPanel.style.maxHeight = '0px';
+    caseStudyPanel.style.visibility = 'hidden';
+    caseStudyPanel.style.opacity = '0';
+    caseStudyPanel.style.pointerEvents = 'none';
+    toggleButtonElement.classList.remove('is-active');
+    toggleButtonElement.setAttribute('aria-expanded', 'false');
+    const title = toggleButtonElement.querySelector('.case-study-toggle-copy strong');
+    if (title) {
+        title.textContent = 'Open story';
+    }
+
+    window.addEventListener('resize', updatePanelHeight);
+});
+
+let sidebarOpen = false;
+
+const updateBodyScrollLock = () => {
+    document.body.style.overflow = sidebarOpen ? 'hidden' : '';
+};
+
 // --- 6. Mobile Sidebar Navigation ---
 const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
 const mobileNavSidebar = document.getElementById('mobile-nav-sidebar');
@@ -137,15 +202,13 @@ const mobileNavClose = document.getElementById('mobile-nav-close');
 const navOverlay = document.getElementById('nav-overlay');
 const mobileNavLinks = document.getElementById('mobile-nav-links');
 
-let sidebarOpen = false;
-
 const openSidebar = () => {
     sidebarOpen = true;
     mobileNavSidebar.classList.add('open');
     navOverlay.classList.remove('hidden');
     navOverlay.classList.add('open');
     mobileMenuToggle?.classList.add('active');
-    document.body.style.overflow = 'hidden';
+    updateBodyScrollLock();
 };
 
 const closeSidebar = () => {
@@ -154,7 +217,7 @@ const closeSidebar = () => {
     navOverlay.classList.add('hidden');
     navOverlay.classList.remove('open');
     mobileMenuToggle?.classList.remove('active');
-    document.body.style.overflow = '';
+    updateBodyScrollLock();
 };
 
 // Toggle sidebar on menu button click
@@ -176,7 +239,25 @@ mobileNavLinks?.querySelectorAll('a').forEach(link => {
 
 // Close sidebar on Escape key
 document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && sidebarOpen) closeSidebar();
+    if (e.key !== 'Escape') return;
+
+    if (commandPaletteVisible) {
+        closeCommandPalette();
+        return;
+    }
+
+    if (sidebarOpen) closeSidebar();
+});
+
+document.addEventListener('keydown', (e) => {
+    const isQuickNavShortcut =
+        (e.altKey && e.key.toLowerCase() === 'k') ||
+        ((e.ctrlKey || e.metaKey) && e.shiftKey && e.key.toLowerCase() === 'p');
+
+    if (!isQuickNavShortcut) return;
+
+    e.preventDefault();
+    openCommandPalette();
 });
 
 
