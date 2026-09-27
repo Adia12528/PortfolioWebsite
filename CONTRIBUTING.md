@@ -18,7 +18,7 @@ git checkout -b feat/short-description
 ```powershell
 # from repo root
 python -m http.server 8000
-# open http://localhost:8000/views/index.html
+# open http://localhost:8000/index.html
 ```
 
 4. Push your branch and open a Pull Request against `main`. Describe the change, why it helps, and any testing notes.
