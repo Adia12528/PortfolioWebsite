@@ -75,7 +75,7 @@
   .polaroid .theme-photo{ opacity:0; transition:opacity .45s ease; }
   :root:not([data-theme="dark"]) .theme-photo-light, :root[data-theme="light"] .theme-photo-light, :root[data-theme="dark"] .theme-photo-dark{ opacity:1; }
   .photo-border{ transform-box:view-box; transform-origin:center; animation:photo-border-spin 10s linear infinite; pointer-events:none; }
-  .photo-ring{ fill:none; stroke:var(--ink); stroke-width:3; stroke-linecap:round; }
+  :root[data-theme="dark"] .photo-border{ filter:invert(1); }
   @keyframes photo-border-spin{ to{ transform:rotate(360deg); } }
   .polaroid figcaption{ font-family:var(--hand); font-size:16px; color:var(--ink-dim); text-align:center; margin-top:10px; }
   @media (max-width:620px){ .polaroid{ align-self:flex-start; transform:rotate(-1.5deg); } }

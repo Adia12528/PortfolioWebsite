@@ -52,16 +52,10 @@
             <svg class="photo-art" viewBox="0 0 200 200" role="img" aria-label="Aditya Soni">
             <defs>
               <clipPath id="photo-circle"><circle cx="100" cy="100" r="64"></circle></clipPath>
-              <filter id="wave-filter" x="-20%" y="-20%" width="140%" height="140%">
-                <feTurbulence type="fractalNoise" baseFrequency=".045" numOctaves="2" seed="7" result="noise"></feTurbulence>
-                <feDisplacementMap in="SourceGraphic" in2="noise" scale="8"></feDisplacementMap>
-              </filter>
             </defs>
             <image class="theme-photo theme-photo-light" href="resources/img1.jpeg" x="36" y="36" width="128" height="128" preserveAspectRatio="xMidYMid slice" clip-path="url(#photo-circle)"></image>
             <image class="theme-photo theme-photo-dark" href="resources/img2.jpeg" x="36" y="36" width="128" height="128" preserveAspectRatio="xMidYMid slice" clip-path="url(#photo-circle)"></image>
-            <g class="photo-border" filter="url(#wave-filter)">
-              <circle class="photo-ring" cx="100" cy="100" r="78"></circle>
-            </g>
+            <image class="photo-border" href="resources/oip-border.png" x="0" y="0" width="200" height="200" preserveAspectRatio="xMidYMid meet"></image>
             </svg>
           </button>
         </div>
