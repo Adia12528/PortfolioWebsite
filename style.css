@@ -229,3 +229,92 @@
   .contact-action:hover,.contact-action:focus-visible{ background:var(--accent); color:#fff; transform:translateY(-2px); outline:none; }
 
   footer{ text-align:center; padding:34px 24px 26px; font-family:var(--hand); font-size:17px; color:var(--ink-faint); }
+
+  /* RESPONSIVE LAYOUT */
+  @media (max-width:900px){
+    header.top{ padding-left:20px; padding-right:20px; }
+    .wrap{ padding-left:20px; padding-right:20px; }
+    .hero{ gap:32px; }
+    .project-body{ grid-template-columns:minmax(150px,.9fr) minmax(0,1.1fr); column-gap:18px; }
+  }
+
+  @media (max-width:760px){
+    header.top{ display:flex; justify-content:space-between; gap:16px; padding-top:16px; }
+    .wordmark{ font-size:18px; }
+    .top-right{ flex-shrink:0; }
+    .top nav{ display:none; flex-direction:column; gap:2px; position:absolute; top:calc(100% + 10px); left:20px; right:20px; width:auto; transform:none; background:var(--card); border:1px solid var(--border); border-radius:8px; box-shadow:var(--shadow); padding:8px 14px; z-index:20; }
+    .top nav.open{ display:flex; }
+    .top nav a{ padding:10px 0; border-bottom:1px solid var(--border); border-radius:0; }
+    .top nav a:last-child{ border-bottom:none; }
+    .nav-toggle{ display:inline-flex; }
+
+    .hero{ flex-direction:column-reverse; padding:42px 0 38px; gap:26px; }
+    .hero-text{ width:100%; }
+    .hero h1{ font-size:clamp(30px,6vw,36px); }
+    .polaroid{ align-self:center; width:min(188px,58vw); transform:rotate(-1.5deg); }
+
+    section{ padding:32px 0; }
+    .section-head{ margin-bottom:15px; }
+    .journey-list::before{ left:17px; top:14px; }
+    .journey-step{ grid-template-columns:36px minmax(0,1fr); gap:14px; padding-bottom:22px; }
+    .journey-date{ grid-column:2; grid-row:1; text-align:left; padding-top:4px; margin-bottom:-10px; }
+    .journey-marker{ grid-column:1; grid-row:1 / span 2; }
+    .journey-step > div:last-child{ grid-column:2; grid-row:2; }
+
+    .project,
+    .project-compact{ display:block; width:auto; margin-right:0; padding:26px 0; }
+    .project-featured{ padding-top:22px; }
+    .project-number,
+    .project-compact .project-number{ display:flex; align-items:baseline; gap:8px; margin-bottom:12px; }
+    .project-number span,
+    .project-compact .project-number span{ margin-top:0; }
+    .project-body{ display:block; }
+    .project-preview,
+    .project-compact .project-preview{ height:clamp(160px,42vw,230px); margin-bottom:16px; }
+    .project-body h3{ font-size:21px; }
+    .project-links{ display:flex; flex-wrap:wrap; gap:8px 16px; }
+    .project-links a{ margin-right:0; }
+
+    .contact-list div{ align-items:flex-start; }
+    .contact-list .k{ flex-basis:88px; }
+  }
+
+  @media (max-width:480px){
+    body{ font-size:15px; }
+    header.top{ padding-left:16px; padding-right:16px; }
+    .wrap{ padding-left:16px; padding-right:16px; }
+    .top-right{ gap:6px; }
+    .theme-toggle{ padding-right:8px; }
+    .theme-toggle #themeLabel{ display:none; }
+    .nav-toggle{ padding-left:10px; }
+    .top nav{ left:16px; right:16px; }
+
+    .hero{ padding-top:34px; }
+    .kicker{ font-size:20px; }
+    .hero h1{ font-size:clamp(28px,9vw,34px); line-height:1.18; margin-bottom:14px; }
+    .hero h1 br{ display:none; }
+    .hero p.lede{ font-size:15px; }
+    .status{ font-size:13px; line-height:1.55; }
+    .links-row{ gap:8px 16px; }
+
+    section{ padding:28px 0; }
+    h2{ font-size:21px; }
+    .about-text .pull{ font-size:17px; padding-left:12px; }
+    .journey-intro{ font-size:17px; }
+    .journey-step h3{ font-size:18px; }
+    .journey-step p{ font-size:14px; }
+    .skill-line{ display:block; }
+    .skill-line .label{ display:block; margin-bottom:2px; }
+    .job-head{ display:block; }
+    .job-head .dates{ display:block; margin-top:2px; }
+    .project-body h3{ font-size:20px; }
+    .project-preview,
+    .project-compact .project-preview{ height:48vw; min-height:150px; max-height:210px; }
+    .project-detail{ margin-top:12px; }
+    .contact-actions{ display:grid; grid-template-columns:1fr; }
+    .contact-action{ justify-content:center; }
+    .contact-list div{ display:block; }
+    .contact-list .k{ display:block; padding:0; margin-bottom:2px; }
+    .contact-list a{ display:inline-block; max-width:100%; overflow-wrap:anywhere; }
+    footer{ padding-left:16px; padding-right:16px; }
+  }
