@@ -6,18 +6,29 @@
 <title>Aditya Soni | Full-Stack Developer</title>
 <meta name="description" content="Aditya Soni — B.Tech CSE student and full-stack developer. Projects, internships, and hackathon experience.">
 <meta name="robots" content="index, follow">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%23a1442e'/%3E%3Ctext x='32' y='43' font-size='26' font-family='Georgia' fill='%23fff' text-anchor='middle'%3EA%3C/text%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%23b84a28'/%3E%3Ctext x='32' y='43' font-size='26' font-family='Georgia,serif' font-weight='bold' fill='%23fff' text-anchor='middle'%3EA%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Caveat:wght@600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <a class="skip-link" href="#about">Skip to content</a>
 
+<!-- Ambient Parallax Background Layer -->
+<div class="parallax-canvas" aria-hidden="true">
+  <div class="parallax-orb orb-1" id="orb1"></div>
+  <div class="parallax-orb orb-2" id="orb2"></div>
+  <div class="parallax-orb orb-3" id="orb3"></div>
+  <div class="parallax-grid-lines"></div>
+</div>
+
 <header class="top">
-  <span class="wordmark">Aditya Soni</span>
-  <nav id="mainNav">
+  <div class="wordmark-wrap">
+    <span class="wordmark">Aditya Soni</span>
+    <span class="badge-status"><span class="badge-dot"></span>Available for roles</span>
+  </div>
+  <nav id="mainNav" aria-label="Main Navigation">
     <a href="#about">About</a>
     <a href="#journey">Journey</a>
     <a href="#work">Work</a>
@@ -25,45 +36,89 @@
     <a href="#contact">Contact</a>
   </nav>
   <div class="top-right">
-    <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch to dark theme" aria-pressed="false"><span class="theme-icon" aria-hidden="true"></span><span id="themeLabel">dark</span></button>
-    <button class="nav-toggle" id="navToggle" type="button" aria-expanded="false" aria-controls="mainNav">menu</button>
+    <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch to dark theme" aria-pressed="false">
+      <span class="theme-icon" aria-hidden="true">
+        <!-- Sun Icon -->
+        <svg class="icon-sun" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="4"></circle>
+          <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"></path>
+        </svg>
+        <!-- Moon Icon -->
+        <svg class="icon-moon" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+        </svg>
+      </span>
+      <span id="themeLabel">dark</span>
+    </button>
+    <button class="nav-toggle" id="navToggle" type="button" aria-expanded="false" aria-controls="mainNav" aria-label="Toggle navigation menu">
+      <span class="nav-toggle-icon" aria-hidden="true">
+        <span></span>
+        <span></span>
+        <span></span>
+      </span>
+    </button>
   </div>
 </header>
 
 <main class="wrap">
 
-  <section class="hero">
+  <!-- HERO SECTION -->
+  <section class="hero" id="hero">
     <div class="hero-text">
-      <span class="kicker">hey, I'm Aditya —</span>
-      <h1>a CS student who'd rather <span class="underline">ship something</span><br>than just study it.</h1>
+      <div class="kicker-row">
+        <span class="kicker">hey, I'm Aditya —</span>
+        <span class="kicker-tag">Software Engineer & Builder</span>
+      </div>
+      <h1 class="hero-headline">
+        <span class="reveal-line"><span>a CS student who'd rather</span></span>
+        <span class="reveal-line"><span><strong class="underline">ship something</strong> than just study it.</span></span>
+      </h1>
       <p class="lede">I’m a B.Tech Computer Science student in Jamshedpur. I learn by building full-stack products, working with good teams, and turning rough ideas into something people can try.</p>
-      <p class="status">Currently: <strong>open to internships and full-time roles</strong> · leading two SIH 2026 teams.</p>
+      <div class="status-callout">
+        <span class="status-pulse-circle"></span>
+        <span>Currently: <strong>open to internships and full-time roles</strong> · leading two SIH 2026 teams.</span>
+      </div>
       <div class="links-row">
-        <a href="resources/resume.pdf" target="_blank" rel="noopener">Resume</a>
-        <a href="https://github.com/Adia12528" target="_blank" rel="noopener">GitHub</a>
-        <a href="https://www.linkedin.com/in/adityasoni01" target="_blank" rel="noopener">LinkedIn</a>
-        <a href="mailto:adityasoniworkmail@gmail.com">Email</a>
+        <a class="btn btn-pill" href="resources/resume.pdf" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
+          <span>Resume</span>
+        </a>
+        <a class="btn btn-pill" href="https://github.com/Adia12528" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+          <span>GitHub</span>
+        </a>
+        <a class="btn btn-pill" href="https://www.linkedin.com/in/adityasoni01" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+          <span>LinkedIn</span>
+        </a>
+        <a class="btn btn-pill btn-accent" href="mailto:adityasoniworkmail@gmail.com">
+          <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+          <span>Email</span>
+        </a>
       </div>
     </div>
-    <figure class="polaroid">
+
+    <!-- Restored Signature Rotating Border Polaroid Profile Photo Animation -->
+    <figure class="polaroid" id="heroPolaroid">
       <div class="frame">
         <div class="photo-slot">
           <button class="photo-trigger" id="photoTrigger" type="button" aria-label="Open profile photo">
             <svg class="photo-art" viewBox="0 0 200 200" role="img" aria-label="Aditya Soni">
-            <defs>
-              <clipPath id="photo-circle"><circle cx="100" cy="100" r="64"></circle></clipPath>
-            </defs>
-            <image class="theme-photo theme-photo-light" href="resources/img1.jpeg" x="36" y="36" width="128" height="128" preserveAspectRatio="xMidYMid slice" clip-path="url(#photo-circle)"></image>
-            <image class="theme-photo theme-photo-dark" href="resources/img2.jpeg" x="36" y="36" width="128" height="128" preserveAspectRatio="xMidYMid slice" clip-path="url(#photo-circle)"></image>
-            <image class="photo-border" href="resources/oip-border.png" x="0" y="0" width="200" height="200" preserveAspectRatio="xMidYMid meet"></image>
+              <defs>
+                <clipPath id="photo-circle"><circle cx="100" cy="100" r="64"></circle></clipPath>
+              </defs>
+              <image class="theme-photo theme-photo-light" href="resources/img1.jpeg" x="36" y="36" width="128" height="128" preserveAspectRatio="xMidYMid slice" clip-path="url(#photo-circle)"></image>
+              <image class="theme-photo theme-photo-dark" href="resources/img2.jpeg" x="36" y="36" width="128" height="128" preserveAspectRatio="xMidYMid slice" clip-path="url(#photo-circle)"></image>
+              <image class="photo-border" href="resources/oip-border.png" x="0" y="0" width="200" height="200" preserveAspectRatio="xMidYMid meet"></image>
             </svg>
           </button>
         </div>
       </div>
-      <figcaption>that's me, probably mid-debug</figcaption>
+      <figcaption>that's me, probably mid-debug <span class="caption-hand">✍</span></figcaption>
     </figure>
   </section>
 
+  <!-- Photo Modal Lightbox -->
   <div class="photo-modal" id="photoModal" hidden role="dialog" aria-modal="true" aria-label="Profile photo preview">
     <button class="photo-modal-close" id="photoModalClose" type="button" aria-label="Close profile photo">close</button>
     <img id="expandedPhoto" src="resources/img1.jpeg" alt="Aditya Soni">
@@ -71,141 +126,126 @@
 
   <hr class="rule">
 
-  <section id="about">
-    <div class="section-head"><span class="section-num">01</span><h2>About</h2></div>
-    <div class="about-text reveal">
-      <p>I build full-stack products from the first rough screen to the last API route. I work mostly with React, Node, Python, and Django, choosing the tools that fit the problem instead of forcing a stack.</p>
-      <p class="pull">The best way I’ve found to learn is to ship something slightly beyond what I know.</p>
-      <p>I’m currently leading two Smart India Hackathon submissions: a network-attack forecasting system and a mining-reserve prediction tool.</p>
-    </div>
-  </section>
-
-  <hr class="rule">
-
-  <section id="journey">
-    <div class="section-head"><span class="section-num">02</span><h2>How I got here</h2></div>
-    <p class="journey-intro reveal">There wasn’t one big turning point. It was a sequence of small bets: join the team, build the thing, learn from the result, then take on a little more responsibility the next time.</p>
-    <div class="journey-list reveal">
-      <article class="journey-step">
-        <div class="journey-date">2023</div>
-        <div class="journey-marker">01</div>
-        <div><h3>Started with data</h3><p>At RK Sales, I learned how messy real business data can be—and how much a clear report can change a decision.</p><span class="journey-tag">Data Analyst Intern</span></div>
-      </article>
-      <article class="journey-step">
-        <div class="journey-date">2024–25</div>
-        <div class="journey-marker">02</div>
-        <div><h3>Started building in public</h3><p>I joined hackathons, found Team Alpha, and moved from studying concepts to shipping under a deadline. Top-five finishes and a runner-up result made the work feel real.</p><span class="journey-tag">Hackathons · Team Alpha</span></div>
-      </article>
-      <article class="journey-step">
-        <div class="journey-date">2026</div>
-        <div class="journey-marker">03</div>
-        <div><h3>Learned to own the whole product</h3><p>Winning the Trikaya & BettleX Hackathon and interning at Tata Steel pushed me beyond features: deployment, data, feedback, and the unglamorous details that make software useful.</p><span class="journey-tag">1st place · SWE Intern</span></div>
-      </article>
-      <article class="journey-step journey-current">
-        <div class="journey-date">Now</div>
-        <div class="journey-marker">04</div>
-        <div><h3>Leading, still learning</h3><p>I’m leading two Smart India Hackathon submissions while finishing my B.Tech. The goal is simple: make ambitious ideas understandable enough for a team to build together.</p><span class="journey-tag">SIH 2026 · Team Lead</span></div>
-      </article>
-    </div>
-  </section>
-
-  <hr class="rule">
-
-  <section id="skills">
-    <div class="section-head"><span class="section-num">03</span><h2>Tools I use</h2></div>
-    <div class="reveal">
-      <div class="skill-line"><span class="label">Build with</span><span class="items">JavaScript, TypeScript, Python, Java, SQL</span></div>
-      <div class="skill-line"><span class="label">Reach for</span><span class="items">React, React Native, Node.js, Socket.io, MongoDB, Django, Git</span></div>
-      <div class="skill-line"><span class="label">Understand</span><span class="items">Data structures, databases, operating systems, computer networks</span></div>
-    </div>
-  </section>
-
-  <hr class="rule">
-
-  <section id="work">
-    <div class="section-head"><span class="section-num">04</span><h2>Experience</h2></div>
-    <div class="reveal">
-      <div class="job">
-        <div class="job-head"><h3>Software Engineering Intern · Tata Steel</h3><span class="dates">May–Jun 2026</span></div>
-        <ul>
-          <li>Built internal tools for process automation with Python, SQL, and Django.</li>
-          <li>Worked with senior engineers on CI/CD and production dashboards.</li>
-        </ul>
+  <!-- ABOUT SECTION -->
+  <section id="about" class="section-editorial">
+    <div class="editorial-left">
+      <div class="section-head sticky-head">
+        <span class="section-num">01</span>
+        <h2>About</h2>
       </div>
-      <div class="job">
-        <div class="job-head"><h3>Data Analyst Intern · RK Sales</h3><span class="dates">Sep 2023–Feb 2024</span></div>
-        <ul><li>Cleaned business data and built Excel reports that helped the team make faster decisions.</li></ul>
+    </div>
+    <div class="editorial-right">
+      <div class="about-text reveal">
+        <p class="about-lead">I build full-stack products from the first rough screen to the last API route. I work mostly with React, Node, Python, and Django, choosing the tools that fit the problem instead of forcing a stack.</p>
+        <blockquote class="pull">The best way I’ve found to learn is to ship something slightly beyond what I know.</blockquote>
+        <p>I’m currently leading two Smart India Hackathon submissions: a network-attack forecasting system and a mining-reserve prediction tool.</p>
       </div>
     </div>
   </section>
 
   <hr class="rule">
 
-  <section id="projects">
-    <div class="section-head"><span class="section-num">05</span><h2>Selected work</h2></div>
-    <p class="projects-intro reveal">A few things I’ve built to solve a real problem, learn something difficult, or make a weekend disappear. I’ve kept the notes practical: what it is, what I owned, and what I took away from it.</p>
-
-    <div class="project project-featured reveal">
-      <div class="project-number">01<span>/04</span></div>
-      <div class="project-body">
-        <a class="project-preview project-image-preview" href="https://devchat-pro-frontend.vercel.app/" target="_blank" rel="noopener" aria-label="Open the DevChatPro live preview"><img class="project-preview-image" src="resources/DevChat Pro.png" alt="DevChatPro project screenshot"><span class="preview-open">open live preview ↗</span></a>
-        <h3>DevChatPro</h3>
-        <p class="stack">React · Node.js · Socket.io · WebRTC</p>
-        <p class="project-meta">Real-time collaboration · solo build · 2025</p>
-        <p>A messaging and video-calling platform I built because I wanted to understand WebRTC beyond a tutorial. It supports secure auth, typing indicators, read receipts, and offline use as a PWA.</p>
-        <div class="project-detail"><span>My contribution</span><strong>End-to-end build</strong><small>React interface, Node API, Socket.io events, WebRTC calls</small></div>
-        <p class="project-note"><strong>Takeaway:</strong> real-time features are mostly about making unreliable connection state feel calm and predictable.</p>
-        <div class="project-links">
-          <a href="https://github.com/Adia12528/DevChat_pro" target="_blank" rel="noopener">View source <span>↗</span></a>
-          <a href="https://devchat-pro-frontend.vercel.app/" target="_blank" rel="noopener">Try the demo <span>↗</span></a>
+  <!-- STICKY SCROLL JOURNEY SECTION ("HOW I GOT HERE") -->
+  <section id="journey" class="section-journey">
+    <div class="journey-layout">
+      <!-- Sticky Sidebar -->
+      <aside class="journey-sticky-side">
+        <div class="sticky-head-wrapper">
+          <div class="section-head">
+            <span class="section-num">02</span>
+            <h2>How I got here</h2>
+          </div>
+          <p class="journey-intro">There wasn’t one big turning point. It was a sequence of small bets: join the team, build the thing, learn from the result, then take on a little more responsibility the next time.</p>
+          
+          <!-- Interactive Scroll Progress Indicator -->
+          <div class="journey-progress-indicator">
+            <span class="indicator-label">Timeline Progression</span>
+            <div class="indicator-bar"><div class="indicator-fill" id="timelineBarFill"></div></div>
+            <div class="indicator-steps-count"><span id="activeStepNum">01</span> / 04</div>
+          </div>
         </div>
-      </div>
-    </div>
+      </aside>
 
-    <div class="project project-compact reveal">
-      <div class="project-number">02<span>/04</span></div>
-      <div class="project-body">
-        <a class="project-preview project-image-preview" href="https://kramik-ai-blockchain-project.vercel.app" target="_blank" rel="noopener" aria-label="Open the Kramik Engineering Hub live preview"><img class="project-preview-image" src="resources/Kramik.png" alt="Kramik Engineering Hub project screenshot"><span class="preview-open">open live preview ↗</span></a>
-        <h3>Kramik Engineering Hub</h3>
-        <p class="stack">React 18 · Node.js · MongoDB · Solidity</p>
-        <p class="project-meta">Learning platform · team project · 2026</p>
-        <p>An education platform with a study coach and blockchain-verified credentials. We built it to test whether on-chain certificates could be useful to a real learner.</p>
-        <div class="project-detail"><span>My contribution</span><strong>Full-stack integration</strong><small>Course flows, API, and credential contract</small></div>
-        <div class="project-links">
-          <a href="https://github.com/Adia12528/Kramik_Ai_blockchain_project" target="_blank" rel="noopener">View source <span>↗</span></a>
-          <a href="https://kramik-ai-blockchain-project.vercel.app" target="_blank" rel="noopener">Try the demo <span>↗</span></a>
+      <!-- Scroll Timeline Steps Container -->
+      <div class="journey-timeline-content" id="journeyStepsContainer">
+        <div class="timeline-spine-track">
+          <div class="timeline-spine-fill" id="spineFill"></div>
         </div>
+
+        <article class="journey-card-step active" data-step="1">
+          <div class="step-badge">
+            <span class="step-num">01</span>
+            <span class="step-year">2023</span>
+          </div>
+          <div class="step-body">
+            <h3>Started with data</h3>
+            <p>At RK Sales, I learned how messy real business data can be—and how much a clear report can change a decision.</p>
+            <span class="journey-tag">Data Analyst Intern</span>
+          </div>
+        </article>
+
+        <article class="journey-card-step" data-step="2">
+          <div class="step-badge">
+            <span class="step-num">02</span>
+            <span class="step-year">2024–25</span>
+          </div>
+          <div class="step-body">
+            <h3>Started building in public</h3>
+            <p>I joined hackathons, found Team Alpha, and moved from studying concepts to shipping under a deadline. Top-five finishes and a runner-up result made the work feel real.</p>
+            <span class="journey-tag">Hackathons · Team Alpha</span>
+          </div>
+        </article>
+
+        <article class="journey-card-step" data-step="3">
+          <div class="step-badge">
+            <span class="step-num">03</span>
+            <span class="step-year">2026</span>
+          </div>
+          <div class="step-body">
+            <h3>Learned to own the whole product</h3>
+            <p>Winning the Trikaya & BettleX Hackathon and interning at Tata Steel pushed me beyond features: deployment, data, feedback, and the unglamorous details that make software useful.</p>
+            <span class="journey-tag">1st place · SWE Intern</span>
+          </div>
+        </article>
+
+        <article class="journey-card-step" data-step="4">
+          <div class="step-badge">
+            <span class="step-num">04</span>
+            <span class="step-year">Now</span>
+          </div>
+          <div class="step-body">
+            <h3>Leading, still learning</h3>
+            <p>I’m leading two Smart India Hackathon submissions while finishing my B.Tech. The goal is simple: make ambitious ideas understandable enough for a team to build together.</p>
+            <span class="journey-tag">SIH 2026 · Team Lead</span>
+          </div>
+        </article>
       </div>
     </div>
+  </section>
 
-    <div class="project project-compact reveal">
-      <div class="project-number">03<span>/04</span></div>
-      <div class="project-body">
-        <a class="project-preview project-image-preview" href="https://automata-engine.vercel.app" target="_blank" rel="noopener" aria-label="Open the Automata Engine live preview"><img class="project-preview-image" src="resources/Automata.png" alt="Automata Engine project screenshot"><span class="preview-open">open live preview ↗</span></a>
-        <h3>Automata Engine</h3>
-        <p class="stack">JavaScript · Gemini API</p>
-        <p class="project-meta">Study tool · built for a real need · 2025</p>
-        <p>A browser-based Theory of Computation toolkit with DFA, NFA, CFG, PDA, and Turing Machine visualizers. I made it to study faster than drawing the same diagrams on paper.</p>
-        <div class="project-detail"><span>My contribution</span><strong>Interaction design</strong><small>Editable states, transitions, and visual feedback</small></div>
-        <div class="project-links">
-          <a href="https://github.com/Adia12528/AutomataEngine" target="_blank" rel="noopener">View source <span>↗</span></a>
-          <a href="https://automata-engine.vercel.app" target="_blank" rel="noopener">Try the demo <span>↗</span></a>
+  <hr class="rule">
+
+  <!-- TOOLS / SKILLS SECTION -->
+  <section id="skills" class="section-editorial">
+    <div class="editorial-left">
+      <div class="section-head sticky-head">
+        <span class="section-num">03</span>
+        <h2>Tools I use</h2>
+      </div>
+    </div>
+    <div class="editorial-right">
+      <div class="skills-editorial reveal">
+        <div class="skill-line">
+          <span class="label">Build with</span>
+          <span class="items">JavaScript, TypeScript, Python, Java, SQL</span>
         </div>
-      </div>
-    </div>
-
-    <div class="project project-compact reveal">
-      <div class="project-number">04<span>/04</span></div>
-      <div class="project-body">
-        <a class="project-preview project-image-preview" href="https://adia12528.github.io/MANGNEX_Demo/" target="_blank" rel="noopener" aria-label="Open the MANGNEX live demo"><img class="project-preview-image" src="resources/Mangnex.png" alt="MANGNEX project screenshot"><span class="preview-open">open live demo ↗</span></a>
-        <h3>MANGNEX</h3>
-        <p class="stack">React 18 · Vite · Recharts · SIH 2026</p>
-        <p class="project-meta">Decision-support dashboard · SIH 2026</p>
-        <p>A mining-intelligence dashboard combining reserve-probability heatmaps, production-shortfall forecasting, and a DGMS safety checklist in one view.</p>
-        <div class="project-detail"><span>My contribution</span><strong>Product direction</strong><small>Dashboard structure, data storytelling, and team coordination</small></div>
-        <div class="project-links">
-          <a href="https://github.com/Adia12528/MANGNEX_Demo" target="_blank" rel="noopener">View source <span>↗</span></a>
-          <a href="https://adia12528.github.io/MANGNEX_Demo/" target="_blank" rel="noopener">Try the demo <span>↗</span></a>
+        <div class="skill-line">
+          <span class="label">Reach for</span>
+          <span class="items">React, React Native, Node.js, Socket.io, MongoDB, Django, Git</span>
+        </div>
+        <div class="skill-line">
+          <span class="label">Understand</span>
+          <span class="items">Data structures, databases, operating systems, computer networks</span>
         </div>
       </div>
     </div>
@@ -213,48 +253,249 @@
 
   <hr class="rule">
 
-  <section id="achievements">
-    <div class="section-head"><span class="section-num">06</span><h2>A few milestones</h2></div>
-    <ul class="achv reveal">
-      <li><span class="yr">2026</span><span>Leading two Smart India Hackathon submissions.</span></li>
-      <li><span class="yr">2026</span><span>1st place at the Trikaya & BettleX Hackathon.</span></li>
-      <li><span class="yr">2026</span><span>Microsoft certified in AI, ML, NLP, and generative AI fundamentals.</span></li>
-      <li><span class="yr">2024–25</span><span>Runner-up at NSU Tech Event and top-five finalist at RVS Hackathon.</span></li>
-    </ul>
-  </section>
-
-  <hr class="rule">
-
-  <section id="education">
-    <div class="section-head"><span class="section-num">07</span><h2>Education</h2></div>
-    <div class="job reveal" style="border-bottom:none; padding-top:0;">
-      <div class="job-head"><h3>B.Tech, Computer Science & Engineering</h3><span class="dates">2024 – 2028</span></div>
-      <p style="margin-top:4px;">Netaji Subhash University, Jamshedpur</p>
+  <!-- WORK EXPERIENCE SECTION -->
+  <section id="work" class="section-editorial">
+    <div class="editorial-left">
+      <div class="section-head sticky-head">
+        <span class="section-num">04</span>
+        <h2>Experience</h2>
+      </div>
+    </div>
+    <div class="editorial-right">
+      <div class="experience-list reveal">
+        <div class="job">
+          <div class="job-head">
+            <h3>Software Engineering Intern · Tata Steel</h3>
+            <span class="dates">May–Jun 2026</span>
+          </div>
+          <ul>
+            <li>Built internal tools for process automation with Python, SQL, and Django.</li>
+            <li>Worked with senior engineers on CI/CD and production dashboards.</li>
+          </ul>
+        </div>
+        <div class="job">
+          <div class="job-head">
+            <h3>Data Analyst Intern · RK Sales</h3>
+            <span class="dates">Sep 2023–Feb 2024</span>
+          </div>
+          <ul>
+            <li>Cleaned business data and built Excel reports that helped the team make faster decisions.</li>
+          </ul>
+        </div>
+      </div>
     </div>
   </section>
 
   <hr class="rule">
 
-  <section id="contact">
-    <div class="section-head"><span class="section-num">08</span><h2>Let’s talk</h2></div>
-    <p class="reveal">Have a role, idea, or good problem? I’m always happy to hear about it.</p>
-    <div class="contact-actions reveal">
-      <a class="contact-action" href="https://calendly.com/adityasoniworkmail/30min" target="_blank" rel="noopener"><span aria-hidden="true">◷</span>Book a meet</a>
-      <a class="contact-action" href="mailto:adityasoniworkmail@gmail.com"><span aria-hidden="true">↗</span>Send an email</a>
+  <!-- SELECTED WORK / PROJECTS (WIDE PARALLAX CASE STUDIES) -->
+  <section id="projects" class="section-projects-wide">
+    <div class="projects-header-row">
+      <div class="section-head">
+        <span class="section-num">05</span>
+        <h2>Selected work</h2>
+      </div>
+      <p class="projects-intro">A few things I’ve built to solve a real problem, learn something difficult, or make a weekend disappear. I’ve kept the notes practical: what it is, what I owned, and what I took away from it.</p>
     </div>
-    <div class="contact-list reveal">
-      <div><span class="k">Email</span><a href="mailto:adityasoniworkmail@gmail.com">adityasoniworkmail@gmail.com</a></div>
-      <div><span class="k">Phone</span><a href="tel:+919031112667">9031112667</a></div>
-      <div><span class="k">Location</span><span>Jamshedpur, Jhzarkhand</span></div>
-      <div><span class="k">LinkedIn</span><a href="https://www.linkedin.com/in/adityasoni01" target="_blank" rel="noopener">linkedin.com/in/adityasoni01</a></div>
-      <div><span class="k">GitHub</span><a href="https://github.com/Adia12528" target="_blank" rel="noopener">github.com/Adia12528</a></div>
-      <div><span class="k">LeetCode</span><a href="https://leetcode.com/u/Adia12528/" target="_blank" rel="noopener">leetcode.com/u/Adia12528</a></div>
+
+    <div class="projects-showcase">
+      <!-- Project 1: Featured DevChatPro -->
+      <article class="project-showcase-item project-featured-wide reveal" data-parallax-card>
+        <div class="project-media-side">
+          <a class="project-preview-wrap" href="https://devchat-pro-frontend.vercel.app/" target="_blank" rel="noopener" aria-label="Open the DevChatPro live preview">
+            <div class="preview-lens">
+              <img class="project-lens-image" src="resources/DevChat Pro.png" alt="DevChatPro project screenshot">
+              <span class="lens-tag">open live preview ↗</span>
+            </div>
+          </a>
+        </div>
+        <div class="project-narrative-side">
+          <div class="project-serial">01 <span>/ 04 · Featured Solo Build</span></div>
+          <h3>DevChatPro</h3>
+          <p class="stack">React · Node.js · Socket.io · WebRTC</p>
+          <p class="project-meta">Real-time collaboration · solo build · 2025</p>
+          <p class="project-text">A messaging and video-calling platform I built because I wanted to understand WebRTC beyond a tutorial. It supports secure auth, typing indicators, read receipts, and offline use as a PWA.</p>
+          <div class="project-detail">
+            <span>My contribution</span>
+            <strong>End-to-end build</strong>
+            <small>React interface, Node API, Socket.io events, WebRTC calls</small>
+          </div>
+          <p class="project-note"><strong>Takeaway:</strong> real-time features are mostly about making unreliable connection state feel calm and predictable.</p>
+          <div class="project-links">
+            <a class="btn btn-sm btn-subtle" href="https://github.com/Adia12528/DevChat_pro" target="_blank" rel="noopener">View source <span>↗</span></a>
+            <a class="btn btn-sm btn-primary-action" href="https://devchat-pro-frontend.vercel.app/" target="_blank" rel="noopener">Try the demo <span>↗</span></a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Project 2: Kramik Engineering Hub -->
+      <article class="project-showcase-item reveal" data-parallax-card>
+        <div class="project-media-side">
+          <a class="project-preview-wrap" href="https://kramik-ai-blockchain-project.vercel.app" target="_blank" rel="noopener" aria-label="Open the Kramik Engineering Hub live preview">
+            <div class="preview-lens">
+              <img class="project-lens-image" src="resources/Kramik.png" alt="Kramik Engineering Hub project screenshot">
+              <span class="lens-tag">open live preview ↗</span>
+            </div>
+          </a>
+        </div>
+        <div class="project-narrative-side">
+          <div class="project-serial">02 <span>/ 04 · Team Project</span></div>
+          <h3>Kramik Engineering Hub</h3>
+          <p class="stack">React 18 · Node.js · MongoDB · Solidity</p>
+          <p class="project-meta">Learning platform · team project · 2026</p>
+          <p class="project-text">An education platform with a study coach and blockchain-verified credentials. We built it to test whether on-chain certificates could be useful to a real learner.</p>
+          <div class="project-detail">
+            <span>My contribution</span>
+            <strong>Full-stack integration</strong>
+            <small>Course flows, API, and credential contract</small>
+          </div>
+          <div class="project-links">
+            <a class="btn btn-sm btn-subtle" href="https://github.com/Adia12528/Kramik_Ai_blockchain_project" target="_blank" rel="noopener">View source <span>↗</span></a>
+            <a class="btn btn-sm btn-primary-action" href="https://kramik-ai-blockchain-project.vercel.app" target="_blank" rel="noopener">Try the demo <span>↗</span></a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Project 3: Automata Engine -->
+      <article class="project-showcase-item reveal" data-parallax-card>
+        <div class="project-media-side">
+          <a class="project-preview-wrap" href="https://automata-engine.vercel.app" target="_blank" rel="noopener" aria-label="Open the Automata Engine live preview">
+            <div class="preview-lens">
+              <img class="project-lens-image" src="resources/Automata.png" alt="Automata Engine project screenshot">
+              <span class="lens-tag">open live preview ↗</span>
+            </div>
+          </a>
+        </div>
+        <div class="project-narrative-side">
+          <div class="project-serial">03 <span>/ 04 · Study Tool</span></div>
+          <h3>Automata Engine</h3>
+          <p class="stack">JavaScript · Gemini API</p>
+          <p class="project-meta">Study tool · built for a real need · 2025</p>
+          <p class="project-text">A browser-based Theory of Computation toolkit with DFA, NFA, CFG, PDA, and Turing Machine visualizers. I made it to study faster than drawing the same diagrams on paper.</p>
+          <div class="project-detail">
+            <span>My contribution</span>
+            <strong>Interaction design</strong>
+            <small>Editable states, transitions, and visual feedback</small>
+          </div>
+          <div class="project-links">
+            <a class="btn btn-sm btn-subtle" href="https://github.com/Adia12528/AutomataEngine" target="_blank" rel="noopener">View source <span>↗</span></a>
+            <a class="btn btn-sm btn-primary-action" href="https://automata-engine.vercel.app" target="_blank" rel="noopener">Try the demo <span>↗</span></a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Project 4: MANGNEX -->
+      <article class="project-showcase-item reveal" data-parallax-card>
+        <div class="project-media-side">
+          <a class="project-preview-wrap" href="https://adia12528.github.io/MANGNEX_Demo/" target="_blank" rel="noopener" aria-label="Open the MANGNEX live demo">
+            <div class="preview-lens">
+              <img class="project-lens-image" src="resources/Mangnex.png" alt="MANGNEX project screenshot">
+              <span class="lens-tag">open live demo ↗</span>
+            </div>
+          </a>
+        </div>
+        <div class="project-narrative-side">
+          <div class="project-serial">04 <span>/ 04 · Decision-Support</span></div>
+          <h3>MANGNEX</h3>
+          <p class="stack">React 18 · Vite · Recharts · SIH 2026</p>
+          <p class="project-meta">Decision-support dashboard · SIH 2026</p>
+          <p class="project-text">A mining-intelligence dashboard combining reserve-probability heatmaps, production-shortfall forecasting, and a DGMS safety checklist in one view.</p>
+          <div class="project-detail">
+            <span>My contribution</span>
+            <strong>Product direction</strong>
+            <small>Dashboard structure, data storytelling, and team coordination</small>
+          </div>
+          <div class="project-links">
+            <a class="btn btn-sm btn-subtle" href="https://github.com/Adia12528/MANGNEX_Demo" target="_blank" rel="noopener">View source <span>↗</span></a>
+            <a class="btn btn-sm btn-primary-action" href="https://adia12528.github.io/MANGNEX_Demo/" target="_blank" rel="noopener">Try the demo <span>↗</span></a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <hr class="rule">
+
+  <!-- MILESTONES SECTION -->
+  <section id="achievements" class="section-editorial">
+    <div class="editorial-left">
+      <div class="section-head sticky-head">
+        <span class="section-num">06</span>
+        <h2>A few milestones</h2>
+      </div>
+    </div>
+    <div class="editorial-right">
+      <ul class="achv reveal">
+        <li><span class="yr">2026</span><span>Leading two Smart India Hackathon submissions.</span></li>
+        <li><span class="yr">2026</span><span>1st place at the Trikaya & BettleX Hackathon.</span></li>
+        <li><span class="yr">2026</span><span>Microsoft certified in AI, ML, NLP, and generative AI fundamentals.</span></li>
+        <li><span class="yr">2024–25</span><span>Runner-up at NSU Tech Event and top-five finalist at RVS Hackathon.</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <hr class="rule">
+
+  <!-- EDUCATION SECTION -->
+  <section id="education" class="section-editorial">
+    <div class="editorial-left">
+      <div class="section-head sticky-head">
+        <span class="section-num">07</span>
+        <h2>Education</h2>
+      </div>
+    </div>
+    <div class="editorial-right">
+      <div class="job reveal" style="border-bottom:none; padding-top:0;">
+        <div class="job-head">
+          <h3>B.Tech, Computer Science & Engineering</h3>
+          <span class="dates">2024 – 2028</span>
+        </div>
+        <p style="margin-top:4px;">Netaji Subhash University, Jamshedpur</p>
+      </div>
+    </div>
+  </section>
+
+  <hr class="rule">
+
+  <!-- CONTACT SECTION -->
+  <section id="contact" class="section-editorial">
+    <div class="editorial-left">
+      <div class="section-head sticky-head">
+        <span class="section-num">08</span>
+        <h2>Let’s talk</h2>
+      </div>
+      <p class="contact-desc">Have a role, idea, or good problem? I’m always happy to hear about it.</p>
+    </div>
+    <div class="editorial-right">
+      <div class="contact-actions reveal">
+        <a class="btn btn-pill" href="https://calendly.com/adityasoniworkmail/30min" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+          <span>Book a meet</span>
+        </a>
+        <a class="btn btn-pill btn-accent" href="mailto:adityasoniworkmail@gmail.com">
+          <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+          <span>Send an email</span>
+        </a>
+      </div>
+      <div class="contact-list reveal">
+        <div><span class="k">Email</span><a href="mailto:adityasoniworkmail@gmail.com">adityasoniworkmail@gmail.com</a></div>
+        <div><span class="k">Phone</span><a href="tel:+919031112667">+91 9031112667</a></div>
+        <div><span class="k">Location</span><span>Jamshedpur, Jharkhand</span></div>
+        <div><span class="k">LinkedIn</span><a href="https://www.linkedin.com/in/adityasoni01" target="_blank" rel="noopener">linkedin.com/in/adityasoni01</a></div>
+        <div><span class="k">GitHub</span><a href="https://github.com/Adia12528" target="_blank" rel="noopener">github.com/Adia12528</a></div>
+        <div><span class="k">LeetCode</span><a href="https://leetcode.com/u/Adia12528/" target="_blank" rel="noopener">leetcode.com/u/Adia12528</a></div>
+      </div>
     </div>
   </section>
 
 </main>
 
-<footer>— Aditya Soni</footer>
+<footer>
+  <div class="footer-inner">
+    <span>Crafted with care · Aditya Soni</span>
+    <span class="footer-yr">© 2026</span>
+  </div>
+</footer>
 
 <script src="script.js" defer></script>
 </body>
